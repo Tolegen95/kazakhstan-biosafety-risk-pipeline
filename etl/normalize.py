@@ -58,6 +58,12 @@ def normalize_oblast(raw: str | None) -> str:
 
 _CLEAN_FLOAT = re.compile(r"^-?\d+\.\d+$")
 
+# Kazakhstan's real extent is roughly lat 40.6-55.4, lon 46.5-87.3; this
+# bounding box is deliberately a bit more generous so it doesn't reject
+# legitimate border-area foci.
+KZ_LAT_RANGE = (39.0, 56.5)
+KZ_LON_RANGE = (45.0, 88.5)
+
 
 def parse_loose_coordinate(raw) -> tuple[float | None, str | None]:
     """Coordinates in the anthrax source occasionally contain typos such as
@@ -72,6 +78,18 @@ def parse_loose_coordinate(raw) -> tuple[float | None, str | None]:
     if _CLEAN_FLOAT.match(s):
         return float(s), None
     return None, f"unparseable coordinate in source: {s!r}"
+
+
+def check_kazakhstan_bounds(lat: float | None, lon: float | None) -> tuple[float | None, float | None, str | None]:
+    """111 of 4307 anthrax rows have a cleanly-parsed but geographically
+    implausible coordinate (e.g. lat==lon, or values far outside Kazakhstan
+    -- almost certainly a data-entry error in the original spreadsheet, not
+    a parsing artifact here). Drop rather than guess a correction."""
+    if lat is None or lon is None:
+        return lat, lon, None
+    if not (KZ_LAT_RANGE[0] <= lat <= KZ_LAT_RANGE[1]) or not (KZ_LON_RANGE[0] <= lon <= KZ_LON_RANGE[1]):
+        return None, None, f"coordinate outside plausible Kazakhstan bounding box in source: lat={lat}, lon={lon}"
+    return lat, lon, None
 
 
 def parse_loose_count(raw) -> tuple[int | None, str | None]:
@@ -144,8 +162,9 @@ def load_anthrax(raw_dir: Path) -> pd.DataFrame:
         human_linked = species_raw.lower().startswith("man")
         lat, lat_note = parse_loose_coordinate(row.get("lat_dd (широта)"))
         lon, lon_note = parse_loose_coordinate(row.get("lon_dd"))
+        lat, lon, bounds_note = check_kazakhstan_bounds(lat, lon)
         count, count_note = parse_loose_count(row.get(qty_col))
-        notes = [n for n in (note, lat_note, lon_note, count_note) if n]
+        notes = [n for n in (note, lat_note, lon_note, bounds_note, count_note) if n]
         if human_linked:
             notes.append("source species field indicates a linked human case: " + species_raw)
         records.append({
