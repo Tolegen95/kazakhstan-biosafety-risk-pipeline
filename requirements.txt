@@ -4,3 +4,5 @@ openpyxl
 fastapi==0.124.4
 uvicorn==0.24.0
 python-multipart==0.0.6
+scikit-learn
+rasterio
