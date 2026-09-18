@@ -18,15 +18,22 @@ diagrams. Context and status: see `../README.md` at the project root.
 - [ ] Bayesian / PCA modules (need farm-level calf-diarrhea and cryptosporidiosis data)
 - [ ] MaxEnt module (needs covariate rasters)
 - [ ] PDF report generation
-- [ ] Docker Compose packaging
+- [x]/[ ] Docker Compose packaging — `Dockerfile`, `web/Dockerfile` and `docker-compose.yml` are written but **not verified on this machine**: local Docker Desktop has a pre-existing `~/.docker/buildx` permission problem (root-owned config from an earlier `sudo docker` run, unrelated to this project) that blocks builds. Untouched deliberately rather than chown'ing files outside the project. Should build cleanly on a normal Docker setup; revisit/verify before relying on it.
 
-## Running the API + web UI
+## Running the API + web UI (no Docker needed)
 
 ```bash
 pip install -r requirements.txt
-uvicorn api.main:app --reload            # API on http://127.0.0.1:8000 (docs at /docs)
-python3 -m http.server 8080 --directory web   # UI on http://127.0.0.1:8080
-python3 -m api.smoke_test                # or: end-to-end API check without a live server
+./run_local.sh
+```
+
+Starts the API on http://127.0.0.1:8000 (docs at `/docs`) and the web UI on
+http://127.0.0.1:8080 together, Ctrl+C stops both. Verified working (see
+git history). Equivalent to running by hand:
+
+```bash
+uvicorn api.main:app --reload
+python3 -m http.server 8080 --directory web
 ```
 
 Open http://127.0.0.1:8080, upload a CSV matching the unified `focus` schema
@@ -34,6 +41,9 @@ Open http://127.0.0.1:8080, upload a CSV matching the unified `focus` schema
 above), and run the space-time scan module. The UI talks to the API base
 URL shown at the top of the page (default `http://127.0.0.1:8000`) via CORS,
 which the API allows from any origin for local development.
+
+`python3 -m api.smoke_test` runs an end-to-end API check without a live
+server (used for the module/API verification, not the browser UI).
 
 ## Layout
 
