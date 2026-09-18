@@ -16,9 +16,18 @@ diagrams. Context and status: see `../README.md` at the project root.
 - [x] Minimal web UI (`web/index.html`) — upload → run → Leaflet map → cluster table + CSV download; verified in a real browser (Playwright driving system Chrome), screenshot-tested
 - [x] Bayesian beta-binomial module (`pipeline/modules/bayes_beta_binomial.py`) — validated against Ussenbayev et al. 2020: exact reproduction of the published overall and by-sex posteriors; by-age-group is approximate only (see `data/literature/README.md` for why). Not yet wired into the API/web UI (point-events schema only so far) -- `run_literature_modules.py` exercises it directly.
 - [x] PCA module (`pipeline/modules/pca.py`) — validated against Kadyrov et al. 2023: reproduces published explained-variance shares and component coordinates to ~5 decimal places, on both the age-group and farm-size stratifications. Same API/UI wiring caveat as above.
+- [x] MaxEnt module (`pipeline/modules/maxent.py`) — presence-background logistic regression (linear+quadratic features), the documented statistical equivalent to MaxEnt (Renner & Warton 2013, already ref [12] in the article). Covariates: WorldClim 10-arcmin bioclim (19 vars) + elevation, open data. A Kazakhstan-clipped copy is tracked in this repo (`data/covariates/kazakhstan_bioclim.tif`, ~2MB) so `run_maxent.py` works with no download; `etl/export_covariates.py` regenerates it from a fresh global WorldClim download if needed. Run on real anthrax and rabies presence data:
+
+  | Case | n presence | AUC (this run) | AUC (published) |
+  |---|---|---|---|
+  | Anthrax | 4183 | 0.863 ± 0.006 | 0.834 |
+  | Rabies — livestock | 198 | 0.832 ± 0.023 | 0.782 |
+  | Rabies — companion | 152 | 0.917 ± 0.019 | 0.859 |
+  | Rabies — wildlife | 13 | 0.777 ± 0.070 | 0.809 (n=13 here, wide CI, treat as indicative only) |
+
+  All four land in the same qualitative range as the published values, **without** the original studies' top-ranked covariates (MGVF, land-cover type, soil type — not in standard open WorldClim, not reconstructed here). Background points are sampled from all valid land cells in a Kazakhstan-sized bounding box, not masked to the actual national border (no boundary shapefile in this repo) — a documented simplification, see module docstring.
 - [ ] PostGIS storage + migrations (state currently lives in process memory + flat CSVs — fine for dev, not for the pilot)
-- [ ] Wire Bayes/PCA into the API + web UI (needs a `farm_survey` ingestion path alongside the existing `point_events` one)
-- [ ] MaxEnt module (needs covariate rasters -- open data, WorldClim/USGS, not blocked on colleagues either)
+- [ ] Wire Bayes/PCA/MaxEnt into the API + web UI (currently CLI-only: `run_literature_modules.py`, `run_maxent.py`)
 - [ ] PDF report generation
 - [x]/[ ] Docker Compose packaging — `Dockerfile`, `web/Dockerfile` and `docker-compose.yml` are written but **not verified on this machine**: local Docker Desktop has a pre-existing `~/.docker/buildx` permission problem (root-owned config from an earlier `sudo docker` run, unrelated to this project) that blocks builds. Untouched deliberately rather than chown'ing files outside the project. Should build cleanly on a normal Docker setup; revisit/verify before relying on it.
 
