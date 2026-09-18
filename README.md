@@ -26,6 +26,7 @@ diagrams. Context and status: see `../README.md` at the project root.
   | Rabies — wildlife | 13 | 0.777 ± 0.070 | 0.809 (n=13 here, wide CI, treat as indicative only) |
 
   All four land in the same qualitative range as the published values, **without** the original studies' top-ranked covariates (MGVF, land-cover type, soil type — not in standard open WorldClim, not reconstructed here). Background points are sampled from all valid land cells in a Kazakhstan-sized bounding box, not masked to the actual national border (no boundary shapefile in this repo) — a documented simplification, see module docstring.
+- [x] Manuscript result figures (`make_figures.py` → `figures/`) — space-time scan cluster map, MaxEnt jackknife chart, PCA biplot, Bayesian posterior plot, all generated from this repo's real outputs and embedded in the article as Figures 3–6
 - [ ] PostGIS storage + migrations (state currently lives in process memory + flat CSVs — fine for dev, not for the pilot)
 - [ ] Wire Bayes/PCA/MaxEnt into the API + web UI (currently CLI-only: `run_literature_modules.py`, `run_maxent.py`)
 - [ ] PDF report generation
