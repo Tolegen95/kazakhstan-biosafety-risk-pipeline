@@ -56,6 +56,43 @@ def normalize_oblast(raw: str | None) -> str:
     return OBLAST_MAP.get(key, str(raw).strip())
 
 
+_CLEAN_FLOAT = re.compile(r"^-?\d+\.\d+$")
+
+
+def parse_loose_coordinate(raw) -> tuple[float | None, str | None]:
+    """Coordinates in the anthrax source occasionally contain typos such as
+    "50.,115556" or "5,.458728" (a stray comma next to the decimal point).
+    Rather than guess the intended value, treat anything that isn't a clean
+    float as unparseable and flag it -- do not invent a coordinate."""
+    if raw is None or (isinstance(raw, float) and pd.isna(raw)):
+        return None, None
+    if isinstance(raw, (int, float)):
+        return float(raw), None
+    s = str(raw).strip()
+    if _CLEAN_FLOAT.match(s):
+        return float(s), None
+    return None, f"unparseable coordinate in source: {s!r}"
+
+
+def parse_loose_count(raw) -> tuple[int | None, str | None]:
+    """`animal_count` in the anthrax source sometimes holds more than one
+    number in one cell (e.g. "7, 1", "12, 4, 12"), apparently per-species or
+    per-sub-event counts recorded together. We sum the numbers found and
+    flag the row rather than silently pick one and drop the rest."""
+    if raw is None or (isinstance(raw, float) and pd.isna(raw)):
+        return None, None
+    if isinstance(raw, (int, float)):
+        return int(raw), None
+    s = str(raw).strip()
+    nums = re.findall(r"\d+", s)
+    if not nums:
+        return None, f"unparseable animal_count in source: {s!r}"
+    total = sum(int(n) for n in nums)
+    if len(nums) > 1:
+        return total, f"composite animal_count in source ({s!r}) summed to {total}"
+    return total, None
+
+
 # --- messy date/year parsing (anthrax file mixes datetime / int / "MM.YYYY") ---
 def parse_anthrax_year(raw) -> tuple[str | None, int | None, str | None]:
     """Returns (event_date_iso, year, note) for the anthrax `year` column."""
@@ -105,9 +142,10 @@ def load_anthrax(raw_dir: Path) -> pd.DataFrame:
         event_date, year, note = parse_anthrax_year(row.get("year"))
         species_raw = str(row.get("species") or "").strip()
         human_linked = species_raw.lower().startswith("man")
-        notes = []
-        if note:
-            notes.append(note)
+        lat, lat_note = parse_loose_coordinate(row.get("lat_dd (широта)"))
+        lon, lon_note = parse_loose_coordinate(row.get("lon_dd"))
+        count, count_note = parse_loose_count(row.get(qty_col))
+        notes = [n for n in (note, lat_note, lon_note, count_note) if n]
         if human_linked:
             notes.append("source species field indicates a linked human case: " + species_raw)
         records.append({
@@ -116,13 +154,13 @@ def load_anthrax(raw_dir: Path) -> pd.DataFrame:
             "region_oblast": normalize_oblast(row.get("oblast")),
             "district_raion": str(row.get("rayon") or "").strip() or None,
             "settlement_name": str(row.get("selsky okrug") or "").strip() or None,
-            "latitude": row.get("lat_dd (широта)"),
-            "longitude": row.get("lon_dd"),
+            "latitude": lat,
+            "longitude": lon,
             "event_date": event_date,
             "year": year,
             "species": species_raw.replace("man, ", "").replace("man", "unknown") or "unknown",
             "reservoir_category": None,
-            "animal_count": row.get(qty_col),
+            "animal_count": count,
             "confirmation_status": "confirmed",  # source is a historical registry of registered foci
             "data_source": "База с-я 2017.xlsx",
             "notes": "; ".join(notes) or None,
