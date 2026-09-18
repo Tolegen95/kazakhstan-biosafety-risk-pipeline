@@ -14,9 +14,11 @@ diagrams. Context and status: see `../README.md` at the project root.
 - [x] Space-time scan module — real results on anthrax, rabies and FMD (`pipeline/modules/space_time_scan.py`)
 - [x] FastAPI layer (`api/main.py`) — ingest CSV, run module, poll status, fetch GeoJSON; verified end-to-end in `api/smoke_test.py`
 - [x] Minimal web UI (`web/index.html`) — upload → run → Leaflet map → cluster table + CSV download; verified in a real browser (Playwright driving system Chrome), screenshot-tested
+- [x] Bayesian beta-binomial module (`pipeline/modules/bayes_beta_binomial.py`) — validated against Ussenbayev et al. 2020: exact reproduction of the published overall and by-sex posteriors; by-age-group is approximate only (see `data/literature/README.md` for why). Not yet wired into the API/web UI (point-events schema only so far) -- `run_literature_modules.py` exercises it directly.
+- [x] PCA module (`pipeline/modules/pca.py`) — validated against Kadyrov et al. 2023: reproduces published explained-variance shares and component coordinates to ~5 decimal places, on both the age-group and farm-size stratifications. Same API/UI wiring caveat as above.
 - [ ] PostGIS storage + migrations (state currently lives in process memory + flat CSVs — fine for dev, not for the pilot)
-- [ ] Bayesian / PCA modules (need farm-level calf-diarrhea and cryptosporidiosis data)
-- [ ] MaxEnt module (needs covariate rasters)
+- [ ] Wire Bayes/PCA into the API + web UI (needs a `farm_survey` ingestion path alongside the existing `point_events` one)
+- [ ] MaxEnt module (needs covariate rasters -- open data, WorldClim/USGS, not blocked on colleagues either)
 - [ ] PDF report generation
 - [x]/[ ] Docker Compose packaging — `Dockerfile`, `web/Dockerfile` and `docker-compose.yml` are written but **not verified on this machine**: local Docker Desktop has a pre-existing `~/.docker/buildx` permission problem (root-owned config from an earlier `sudo docker` run, unrelated to this project) that blocks builds. Untouched deliberately rather than chown'ing files outside the project. Should build cleanly on a normal Docker setup; revisit/verify before relying on it.
 

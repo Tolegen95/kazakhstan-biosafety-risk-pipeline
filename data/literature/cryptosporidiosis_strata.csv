@@ -1,0 +1,7 @@
+stratum_type,stratum,n_examined,n_positive,source,notes
+overall,all,894,35,Ussenbayev et al. 2020 ICCSA,stated directly in text (MLE 0.0391)
+sex,female,473,19,Ussenbayev et al. 2020 ICCSA,stated directly in text (MLE 0.0402)
+sex,male,421,16,Ussenbayev et al. 2020 ICCSA,stated directly in text (MLE 0.0380)
+age_group,<1 month,257,19,Ussenbayev et al. 2020 ICCSA,n_positive reconstructed from Table 1 MLE 0.0727 x n rounded
+age_group,1-3 months,303,9,Ussenbayev et al. 2020 ICCSA,n_positive reconstructed from Table 1 MLE 0.0293 x n rounded
+age_group,4-12 months,334,8,Ussenbayev et al. 2020 ICCSA,n=334 corrects an internal inconsistency in the paper (Methods text says 344; see data/literature/README.md); n_positive reconstructed from Table 1 MLE 0.0244 x n rounded
