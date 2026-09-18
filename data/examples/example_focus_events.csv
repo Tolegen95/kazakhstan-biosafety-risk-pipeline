@@ -1,0 +1,121 @@
+focus_id,disease,region_oblast,district_raion,settlement_name,latitude,longitude,event_date,year,species,reservoir_category,animal_count,confirmation_status,data_source,notes
+EX-0001,anthrax,Akmola,Example-District-A,Example-village-1,51.20037,71.48962,1993-06-15,1993,horse,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0002,anthrax,Akmola,Example-District-A,Example-village-1,51.0636,71.10251,1991-06-15,1991,horse,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0003,anthrax,Akmola,Example-District-A,Example-village-1,51.60206,71.25234,1990-06-15,1990,sheep,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0004,anthrax,Akmola,Example-District-A,Example-village-1,51.30707,71.43162,1991-06-15,1991,horse,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0005,anthrax,Akmola,Example-District-A,Example-village-1,51.19122,71.60859,1993-06-15,1993,horse,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0006,anthrax,Akmola,Example-District-A,Example-village-1,50.62963,71.01314,1994-06-15,1994,sheep,,2,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0007,anthrax,Akmola,Example-District-A,Example-village-1,51.12947,71.01977,1990-06-15,1990,cattle,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0008,anthrax,Akmola,Example-District-A,Example-village-1,51.14392,70.64497,1990-06-15,1990,horse,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0009,anthrax,Akmola,Example-District-A,Example-village-1,51.18545,71.43399,1991-06-15,1991,sheep,,3,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0010,anthrax,Akmola,Example-District-A,Example-village-1,51.24404,71.10644,1991-06-15,1991,horse,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0011,anthrax,Akmola,Example-District-A,Example-village-1,51.51827,71.15774,1992-06-15,1992,cattle,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0012,anthrax,Akmola,Example-District-A,Example-village-1,51.02492,71.36649,1994-06-15,1994,horse,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0013,anthrax,Akmola,Example-District-A,Example-village-1,51.21913,71.03248,1994-06-15,1994,sheep,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0014,anthrax,Akmola,Example-District-A,Example-village-1,50.73586,71.65781,1994-06-15,1994,horse,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0015,anthrax,Akmola,Example-District-A,Example-village-1,51.00756,72.00012,1993-06-15,1993,sheep,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0016,anthrax,Akmola,Example-District-A,Example-village-1,51.22235,71.57301,1990-06-15,1990,cattle,,2,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0017,anthrax,Akmola,Example-District-A,Example-village-1,51.40487,71.38004,1993-06-15,1993,horse,,3,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0018,anthrax,Akmola,Example-District-A,Example-village-1,50.9973,71.46094,1993-06-15,1993,sheep,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0019,anthrax,Akmola,Example-District-A,Example-village-1,51.23818,71.04384,1992-06-15,1992,cattle,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0020,anthrax,Akmola,Example-District-A,Example-village-1,51.46963,71.74357,1992-06-15,1992,horse,,2,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0021,anthrax,Akmola,Example-District-A,Example-village-1,50.96161,71.59407,1992-06-15,1992,horse,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0022,anthrax,Akmola,Example-District-A,Example-village-1,51.17081,71.7771,1993-06-15,1993,sheep,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0023,anthrax,Akmola,Example-District-A,Example-village-1,51.10184,71.28943,1991-06-15,1991,cattle,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0024,anthrax,Akmola,Example-District-A,Example-village-1,51.07159,71.3089,1991-06-15,1991,cattle,,2,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0025,anthrax,Akmola,Example-District-A,Example-village-1,51.16377,71.34081,1993-06-15,1993,sheep,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0026,anthrax,Akmola,Example-District-A,Example-village-1,51.06693,71.74984,1992-06-15,1992,horse,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0027,anthrax,Akmola,Example-District-A,Example-village-1,51.19276,71.60051,1994-06-15,1994,sheep,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0028,anthrax,Akmola,Example-District-A,Example-village-1,51.19838,71.57501,1991-06-15,1991,horse,,3,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0029,anthrax,Akmola,Example-District-A,Example-village-1,51.304,70.89354,1992-06-15,1992,horse,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0030,anthrax,Akmola,Example-District-A,Example-village-1,50.93002,71.44922,1993-06-15,1993,sheep,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0031,anthrax,Akmola,Example-District-A,Example-village-1,50.95048,71.21282,1991-06-15,1991,horse,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0032,anthrax,Akmola,Example-District-A,Example-village-1,51.14708,71.33822,1992-06-15,1992,horse,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0033,anthrax,Akmola,Example-District-A,Example-village-1,51.35597,71.0899,1991-06-15,1991,cattle,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0034,anthrax,Akmola,Example-District-A,Example-village-1,50.88365,71.47795,1994-06-15,1994,horse,,3,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0035,anthrax,Akmola,Example-District-A,Example-village-1,51.49162,71.45782,1995-06-15,1995,sheep,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0036,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.87035,82.10056,2012-06-15,2012,cattle,,2,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0037,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.99071,82.06786,2010-06-15,2010,cattle,,3,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0038,anthrax,East Kazakhstan,Example-District-B,Example-village-2,50.08918,82.38863,2011-06-15,2011,horse,,3,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0039,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.93274,82.21579,2010-06-15,2010,sheep,,2,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0040,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.88355,82.53152,2012-06-15,2012,horse,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0041,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.65621,82.87465,2012-06-15,2012,sheep,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0042,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.70168,82.44348,2012-06-15,2012,cattle,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0043,anthrax,East Kazakhstan,Example-District-B,Example-village-2,50.21427,82.56148,2011-06-15,2011,horse,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0044,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.7264,82.51833,2010-06-15,2010,cattle,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0045,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.90199,82.50618,2011-06-15,2011,sheep,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0046,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.69829,83.01351,2010-06-15,2010,cattle,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0047,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.63648,82.68433,2012-06-15,2012,sheep,,2,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0048,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.84787,82.44199,2011-06-15,2011,cattle,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0049,anthrax,East Kazakhstan,Example-District-B,Example-village-2,50.08373,82.59414,2011-06-15,2011,sheep,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0050,anthrax,East Kazakhstan,Example-District-B,Example-village-2,50.0137,82.46518,2010-06-15,2010,cattle,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0051,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.62293,82.29597,2012-06-15,2012,cattle,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0052,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.97292,82.59155,2012-06-15,2012,horse,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0053,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.77301,82.75752,2010-06-15,2010,cattle,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0054,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.90556,82.89413,2010-06-15,2010,horse,,2,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0055,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.99565,82.45911,2010-06-15,2010,sheep,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0056,anthrax,East Kazakhstan,Example-District-B,Example-village-2,50.14161,82.56482,2010-06-15,2010,sheep,,3,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0057,anthrax,East Kazakhstan,Example-District-B,Example-village-2,50.09536,82.8078,2011-06-15,2011,horse,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0058,anthrax,East Kazakhstan,Example-District-B,Example-village-2,50.27874,82.28835,2011-06-15,2011,horse,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0059,anthrax,East Kazakhstan,Example-District-B,Example-village-2,50.02348,82.8184,2011-06-15,2011,horse,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0060,anthrax,East Kazakhstan,Example-District-B,Example-village-2,49.61371,82.17783,2012-06-15,2012,horse,,3,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0061,anthrax,Example-Oblast,Example-District-C,Example-village-40,41.74711,72.06447,1976-06-15,1976,cattle,,3,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0062,anthrax,Example-Oblast,Example-District-C,Example-village-9,53.37354,78.88508,1985-06-15,1985,horse,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0063,anthrax,Example-Oblast,Example-District-C,Example-village-29,53.68062,54.8913,1999-06-15,1999,sheep,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0064,anthrax,Example-Oblast,Example-District-C,Example-village-34,49.44468,50.84983,1992-06-15,1992,cattle,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0065,anthrax,Example-Oblast,Example-District-C,Example-village-18,52.77023,79.14051,1988-06-15,1988,cattle,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0066,anthrax,Example-Oblast,Example-District-C,Example-village-10,53.44274,82.71791,1976-06-15,1976,sheep,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0067,anthrax,Example-Oblast,Example-District-C,Example-village-29,50.08752,55.58705,1978-06-15,1978,sheep,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0068,anthrax,Example-Oblast,Example-District-C,Example-village-24,45.87945,57.11098,2014-06-15,2014,horse,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0069,anthrax,Example-Oblast,Example-District-C,Example-village-9,41.56703,62.22339,2012-06-15,2012,cattle,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0070,anthrax,Example-Oblast,Example-District-C,Example-village-20,52.87356,62.07415,1985-06-15,1985,sheep,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0071,anthrax,Example-Oblast,Example-District-C,Example-village-18,43.3334,56.89638,1980-06-15,1980,horse,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0072,anthrax,Example-Oblast,Example-District-C,Example-village-30,41.26374,77.10929,2008-06-15,2008,horse,,3,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0073,anthrax,Example-Oblast,Example-District-C,Example-village-9,41.20197,77.52724,2015-06-15,2015,sheep,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0074,anthrax,Example-Oblast,Example-District-C,Example-village-45,42.02561,50.25049,2006-06-15,2006,horse,,2,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0075,anthrax,Example-Oblast,Example-District-C,Example-village-32,44.74936,80.31177,1994-06-15,1994,horse,,2,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0076,anthrax,Example-Oblast,Example-District-C,Example-village-20,46.73961,82.3569,2013-06-15,2013,cattle,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0077,anthrax,Example-Oblast,Example-District-C,Example-village-39,41.50052,76.09299,1973-06-15,1973,sheep,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0078,anthrax,Example-Oblast,Example-District-C,Example-village-6,50.45012,61.82931,2006-06-15,2006,cattle,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0079,anthrax,Example-Oblast,Example-District-C,Example-village-15,51.74063,54.63353,1984-06-15,1984,horse,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0080,anthrax,Example-Oblast,Example-District-C,Example-village-8,51.59914,82.86347,1997-06-15,1997,horse,,2,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0081,anthrax,Example-Oblast,Example-District-C,Example-village-36,52.39282,72.78086,1976-06-15,1976,sheep,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0082,anthrax,Example-Oblast,Example-District-C,Example-village-39,54.55729,80.721,1974-06-15,1974,sheep,,3,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0083,anthrax,Example-Oblast,Example-District-C,Example-village-38,49.93905,54.37783,2013-06-15,2013,sheep,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0084,anthrax,Example-Oblast,Example-District-C,Example-village-20,51.18008,64.79196,1977-06-15,1977,sheep,,3,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0085,anthrax,Example-Oblast,Example-District-C,Example-village-28,40.51676,80.7728,1991-06-15,1991,cattle,,3,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0086,anthrax,Example-Oblast,Example-District-C,Example-village-20,48.49445,75.86561,2008-06-15,2008,cattle,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0087,anthrax,Example-Oblast,Example-District-C,Example-village-9,54.25168,62.49729,2009-06-15,2009,cattle,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0088,anthrax,Example-Oblast,Example-District-C,Example-village-36,55.39071,52.91953,1986-06-15,1986,horse,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0089,anthrax,Example-Oblast,Example-District-C,Example-village-7,54.26887,51.93526,1991-06-15,1991,horse,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0090,anthrax,Example-Oblast,Example-District-C,Example-village-30,41.80973,54.0723,1996-06-15,1996,horse,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0091,anthrax,Example-Oblast,Example-District-C,Example-village-45,51.63108,54.62229,1992-06-15,1992,horse,,2,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0092,anthrax,Example-Oblast,Example-District-C,Example-village-25,51.92122,49.70414,1982-06-15,1982,cattle,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0093,anthrax,Example-Oblast,Example-District-C,Example-village-36,44.86407,59.48923,1992-06-15,1992,cattle,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0094,anthrax,Example-Oblast,Example-District-C,Example-village-44,40.88,86.81447,1984-06-15,1984,cattle,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0095,anthrax,Example-Oblast,Example-District-C,Example-village-13,43.82192,62.76441,2007-06-15,2007,sheep,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0096,anthrax,Example-Oblast,Example-District-C,Example-village-8,40.51187,67.13346,2012-06-15,2012,cattle,,2,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0097,anthrax,Example-Oblast,Example-District-C,Example-village-11,53.33737,66.36971,2017-06-15,2017,cattle,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0098,anthrax,Example-Oblast,Example-District-C,Example-village-16,44.12091,68.07749,2008-06-15,2008,horse,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0099,anthrax,Example-Oblast,Example-District-C,Example-village-21,49.74227,68.44832,2019-06-15,2019,horse,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0100,anthrax,Example-Oblast,Example-District-C,Example-village-9,53.53828,54.17485,1982-06-15,1982,sheep,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0101,anthrax,Example-Oblast,Example-District-C,Example-village-13,55.18375,84.66365,1982-06-15,1982,horse,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0102,anthrax,Example-Oblast,Example-District-C,Example-village-26,43.22117,67.25904,1992-06-15,1992,sheep,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0103,anthrax,Example-Oblast,Example-District-C,Example-village-31,40.6282,59.61403,1986-06-15,1986,horse,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0104,anthrax,Example-Oblast,Example-District-C,Example-village-44,43.66653,65.60254,2012-06-15,2012,cattle,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0105,anthrax,Example-Oblast,Example-District-C,Example-village-36,52.8492,77.44279,2011-06-15,2011,cattle,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0106,anthrax,Example-Oblast,Example-District-C,Example-village-17,50.56289,76.42732,1986-06-15,1986,cattle,,2,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0107,anthrax,Example-Oblast,Example-District-C,Example-village-46,51.72614,53.63349,1989-06-15,1989,horse,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0108,anthrax,Example-Oblast,Example-District-C,Example-village-10,45.10623,84.46573,1999-06-15,1999,cattle,,4,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0109,anthrax,Example-Oblast,Example-District-C,Example-village-30,41.41909,85.61711,1989-06-15,1989,sheep,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0110,anthrax,Example-Oblast,Example-District-C,Example-village-36,44.3698,79.07187,1993-06-15,1993,horse,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0111,anthrax,Example-Oblast,Example-District-C,Example-village-22,54.73372,64.33965,1981-06-15,1981,cattle,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0112,anthrax,Example-Oblast,Example-District-C,Example-village-34,52.94336,60.40304,1992-06-15,1992,sheep,,2,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0113,anthrax,Example-Oblast,Example-District-C,Example-village-6,48.55135,77.76687,1976-06-15,1976,horse,,6,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0114,anthrax,Example-Oblast,Example-District-C,Example-village-25,40.2392,85.334,2008-06-15,2008,sheep,,3,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0115,anthrax,Example-Oblast,Example-District-C,Example-village-37,51.16689,67.93195,2016-06-15,2016,horse,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0116,anthrax,Example-Oblast,Example-District-C,Example-village-46,48.72327,69.32435,1971-06-15,1971,sheep,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0117,anthrax,Example-Oblast,Example-District-C,Example-village-28,47.0187,72.24292,1973-06-15,1973,horse,,1,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0118,anthrax,Example-Oblast,Example-District-C,Example-village-12,49.19504,55.88788,1970-06-15,1970,cattle,,7,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0119,anthrax,Example-Oblast,Example-District-C,Example-village-38,43.06655,65.17163,2011-06-15,2011,horse,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
+EX-0120,anthrax,Example-Oblast,Example-District-C,Example-village-24,48.57861,79.28183,1977-06-15,1977,horse,,5,suspected,synthetic_example,synthetic example row -- not real surveillance data
