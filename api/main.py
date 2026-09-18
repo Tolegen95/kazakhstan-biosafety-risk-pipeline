@@ -22,6 +22,7 @@ from __future__ import annotations
 import io
 import json
 import threading
+import time
 import uuid
 from pathlib import Path
 from typing import Any
@@ -117,12 +118,14 @@ async def list_modules():
 
 def _execute_run(run_id: str, dataset_id: str, module_name: str, params: dict) -> None:
     _runs[run_id]["status"] = "running"
+    started = time.time()
     try:
         events = pd.read_csv(_datasets[dataset_id]["path"])
         module = MODULES[module_name]
         ctx = RunContext(disease=_datasets[dataset_id]["disease"], events=events, params=params)
         warnings = module.validate(ctx)
         result = module.run(ctx)
+        result.summary["elapsed_seconds"] = round(time.time() - started, 2)
         _runs[run_id].update(
             {
                 "status": "done",

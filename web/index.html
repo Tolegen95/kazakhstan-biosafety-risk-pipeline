@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biosafety Risk Pipeline</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  :root { color-scheme: light; }
+  body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; background: #f7f7f5; color: #1a1a1a; }
+  header { padding: 16px 24px; background: #14213d; color: #fff; }
+  header h1 { margin: 0; font-size: 18px; }
+  header p { margin: 4px 0 0; font-size: 13px; color: #c9d2e3; }
+  main { max-width: 1000px; margin: 0 auto; padding: 20px 24px 60px; }
+  section { background: #fff; border: 1px solid #e3e2df; border-radius: 8px; padding: 16px 20px; margin-bottom: 18px; }
+  section h2 { font-size: 15px; margin: 0 0 12px; }
+  label { display: block; font-size: 13px; margin: 10px 0 4px; color: #444; }
+  input[type=number], input[type=text], select { width: 100%; box-sizing: border-box; padding: 6px 8px; border: 1px solid #ccc; border-radius: 5px; font-size: 13px; }
+  .row { display: flex; gap: 16px; flex-wrap: wrap; }
+  .row > div { flex: 1; min-width: 140px; }
+  button { margin-top: 14px; padding: 8px 16px; border: none; border-radius: 6px; background: #14213d; color: #fff; font-size: 13px; cursor: pointer; }
+  button:disabled { background: #9aa3b5; cursor: not-allowed; }
+  #status { font-size: 13px; margin-top: 10px; color: #555; white-space: pre-wrap; }
+  #status.error { color: #b3261e; }
+  #map { height: 420px; border-radius: 6px; margin-top: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-top: 12px; }
+  th, td { text-align: left; padding: 5px 8px; border-bottom: 1px solid #eee; }
+  th { background: #f0efec; position: sticky; top: 0; }
+  tr.significant td:first-child { border-left: 3px solid #b3261e; }
+  .hint { font-size: 12px; color: #777; margin-top: 4px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Biosafety Risk Pipeline — reference implementation</h1>
+  <p>Upload a focus registry CSV, run the space-time scan module, view clusters on a map.</p>
+</header>
+<main>
+  <section>
+    <h2>1. API connection</h2>
+    <div class="row">
+      <div>
+        <label for="apiBase">API base URL</label>
+        <input type="text" id="apiBase" value="http://127.0.0.1:8000">
+      </div>
+    </div>
+    <p class="hint" id="apiStatus">not connected</p>
+  </section>
+
+  <section>
+    <h2>2. Upload data</h2>
+    <div class="row">
+      <div>
+        <label for="disease">Disease</label>
+        <select id="disease">
+          <option value="anthrax">Anthrax</option>
+          <option value="rabies">Rabies</option>
+          <option value="fmd">FMD</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="csvFile">CSV file (unified focus schema)</label>
+        <input type="file" id="csvFile" accept=".csv">
+      </div>
+    </div>
+    <button id="uploadBtn">Upload</button>
+    <p class="hint">Columns required: focus_id, region_oblast, district_raion, settlement_name, latitude, longitude, event_date, year, species, animal_count, confirmation_status, data_source, notes.</p>
+    <div id="datasetInfo" class="hint"></div>
+  </section>
+
+  <section id="runSection" hidden>
+    <h2>3. Run space-time scan</h2>
+    <div class="row">
+      <div>
+        <label for="spatialFrac">Max spatial window (fraction of cases)</label>
+        <input type="number" id="spatialFrac" value="0.5" min="0.01" max="1" step="0.05">
+      </div>
+      <div>
+        <label for="temporalFrac">Max temporal window (fraction of study period)</label>
+        <input type="number" id="temporalFrac" value="0.5" min="0.01" max="1" step="0.05">
+      </div>
+      <div>
+        <label for="permutations">Monte Carlo permutations</label>
+        <input type="number" id="permutations" value="199" min="19" max="1999" step="10">
+      </div>
+    </div>
+    <button id="runBtn">Run analysis</button>
+    <div id="status"></div>
+  </section>
+
+  <section id="resultSection" hidden>
+    <h2>4. Results</h2>
+    <div id="summary" class="hint"></div>
+    <div id="map"></div>
+    <button id="downloadBtn">Download clusters as CSV</button>
+    <table id="clusterTable">
+      <thead>
+        <tr>
+          <th>#</th><th>Districts (top)</th><th>Years</th><th>Cases</th><th>LLR</th><th>p</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+let apiBase = document.getElementById('apiBase').value.replace(/\/$/, '');
+let datasetId = null;
+let lastClusters = [];
+let map, layerGroup;
+
+async function checkApi() {
+  apiBase = document.getElementById('apiBase').value.replace(/\/$/, '');
+  const el = document.getElementById('apiStatus');
+  try {
+    const r = await fetch(apiBase + '/');
+    const j = await r.json();
+    el.textContent = 'connected — modules: ' + j.modules.join(', ');
+    el.style.color = '#0a7d33';
+  } catch (e) {
+    el.textContent = 'cannot reach API at ' + apiBase + ' (' + e.message + ')';
+    el.style.color = '#b3261e';
+  }
+}
+document.getElementById('apiBase').addEventListener('change', checkApi);
+checkApi();
+
+document.getElementById('uploadBtn').addEventListener('click', async () => {
+  const disease = document.getElementById('disease').value;
+  const fileInput = document.getElementById('csvFile');
+  if (!fileInput.files.length) { alert('choose a CSV file first'); return; }
+  const fd = new FormData();
+  fd.append('disease', disease);
+  fd.append('file', fileInput.files[0]);
+  const infoEl = document.getElementById('datasetInfo');
+  infoEl.textContent = 'uploading...';
+  try {
+    const r = await fetch(apiBase + '/datasets', { method: 'POST', body: fd });
+    if (!r.ok) throw new Error(await r.text());
+    const j = await r.json();
+    datasetId = j.dataset_id;
+    infoEl.textContent = `dataset ${j.dataset_id} — ${j.row_count} rows, ` +
+      `${j.missing_coordinates} missing coordinates, ${j.missing_year} missing year`;
+    document.getElementById('runSection').hidden = false;
+  } catch (e) {
+    infoEl.textContent = 'upload failed: ' + e.message;
+  }
+});
+
+document.getElementById('runBtn').addEventListener('click', async () => {
+  if (!datasetId) return;
+  const statusEl = document.getElementById('status');
+  statusEl.className = '';
+  statusEl.textContent = 'starting run...';
+  const params = JSON.stringify({
+    max_spatial_fraction: parseFloat(document.getElementById('spatialFrac').value),
+    max_temporal_fraction: parseFloat(document.getElementById('temporalFrac').value),
+    n_permutations: parseInt(document.getElementById('permutations').value, 10),
+  });
+  const fd = new FormData();
+  fd.append('dataset_id', datasetId);
+  fd.append('module', 'space_time_scan');
+  fd.append('params', params);
+
+  let run;
+  try {
+    const r = await fetch(apiBase + '/runs', { method: 'POST', body: fd });
+    if (!r.ok) throw new Error(await r.text());
+    run = await r.json();
+  } catch (e) {
+    statusEl.className = 'error';
+    statusEl.textContent = 'failed to start run: ' + e.message;
+    return;
+  }
+
+  statusEl.textContent = 'running (run_id ' + run.run_id + ')...';
+  while (true) {
+    await new Promise(res => setTimeout(res, 700));
+    const r = await fetch(apiBase + '/runs/' + run.run_id);
+    run = await r.json();
+    if (run.status === 'done' || run.status === 'failed') break;
+    statusEl.textContent = 'status: ' + run.status + ' ...';
+  }
+
+  if (run.status === 'failed') {
+    statusEl.className = 'error';
+    statusEl.textContent = 'run failed: ' + run.error;
+    return;
+  }
+  statusEl.textContent = 'done in ' + run.summary.elapsed_seconds + 's';
+  showResults(run);
+});
+
+function showResults(run) {
+  document.getElementById('resultSection').hidden = false;
+  const s = run.summary;
+  document.getElementById('summary').textContent =
+    `${s.n_events_used} events used (${s.n_events_dropped} dropped), ${s.n_districts} districts, ` +
+    `${s.n_candidate_zones} candidate zones x ${s.n_candidate_windows} windows, ` +
+    `observed max LLR ${s.observed_max_llr} (p=${s.observed_max_llr_p_value}), ` +
+    `${s['n_significant_clusters_p<0.05']} significant clusters (p<0.05)`;
+
+  lastClusters = run.clusters;
+  const tbody = document.querySelector('#clusterTable tbody');
+  tbody.innerHTML = '';
+  for (const c of run.clusters) {
+    const tr = document.createElement('tr');
+    if (c.p_value < 0.05) tr.className = 'significant';
+    tr.innerHTML = `<td>${c.cluster_rank}</td>
+      <td>${c.districts.split('; ').slice(0, 2).join('; ')}${c.n_districts > 2 ? ' (+' + (c.n_districts - 2) + ')' : ''}</td>
+      <td>${c.start_year}-${c.end_year}</td>
+      <td>${c.observed_cases}</td>
+      <td>${c.log_likelihood_ratio}</td>
+      <td>${c.p_value}</td>`;
+    tbody.appendChild(tr);
+  }
+
+  if (!map) {
+    map = L.map('map').setView([48, 68], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors', maxZoom: 12,
+    }).addTo(map);
+    layerGroup = L.layerGroup().addTo(map);
+  }
+  layerGroup.clearLayers();
+  for (const f of run.geojson.features) {
+    const [lon, lat] = f.geometry.coordinates;
+    const p = f.properties;
+    const significant = p.p_value < 0.05;
+    const circle = L.circle([lat, lon], {
+      radius: Math.max(p.radius_km, 3) * 1000,
+      color: significant ? '#b3261e' : '#8a8a8a',
+      fillOpacity: significant ? 0.25 : 0.08,
+      weight: significant ? 2 : 1,
+    }).addTo(layerGroup);
+    circle.bindPopup(
+      `<b>Cluster ${p.cluster_rank}</b><br>${p.start_year}-${p.end_year}<br>` +
+      `${p.observed_cases} cases, LLR=${p.log_likelihood_ratio}, p=${p.p_value}<br>${p.districts}`
+    );
+  }
+}
+
+document.getElementById('downloadBtn').addEventListener('click', () => {
+  if (!lastClusters.length) return;
+  const cols = Object.keys(lastClusters[0]);
+  const lines = [cols.join(',')].concat(
+    lastClusters.map(row => cols.map(c => JSON.stringify(row[c] ?? '')).join(','))
+  );
+  const blob = new Blob([lines.join('\n')], { type: 'text/csv' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'clusters.csv';
+  a.click();
+});
+</script>
+</body>
+</html>
