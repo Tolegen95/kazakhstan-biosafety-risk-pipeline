@@ -10,13 +10,23 @@ diagrams. Context and status: see `../README.md` at the project root.
 
 - [x] Unified data model (schema) — see `etl/normalize.py` docstring
 - [x] ETL: normalize real anthrax / rabies / FMD registries into one schema
-- [ ] PostGIS storage + migrations
-- [ ] `RiskModule` interface + registry
-- [ ] Space-time scan module (priority 1 — real data already available)
+- [x] `RiskModule` interface (`pipeline/core.py`)
+- [x] Space-time scan module — real results on anthrax, rabies and FMD (`pipeline/modules/space_time_scan.py`)
+- [x] FastAPI layer (`api/main.py`) — ingest CSV, run module, poll status, fetch GeoJSON; verified end-to-end in `api/smoke_test.py`
+- [ ] PostGIS storage + migrations (state currently lives in process memory + flat CSVs — fine for dev, not for the pilot)
 - [ ] Bayesian / PCA modules (need farm-level calf-diarrhea and cryptosporidiosis data)
 - [ ] MaxEnt module (needs covariate rasters)
-- [ ] FastAPI + minimal web UI
+- [ ] Minimal web UI (upload → map → PDF report)
+- [ ] PDF report generation
 - [ ] Docker Compose packaging
+
+## Running the API
+
+```bash
+pip install -r requirements.txt
+uvicorn api.main:app --reload      # http://127.0.0.1:8000/docs for interactive API docs
+python3 -m api.smoke_test          # end-to-end check without a live server
+```
 
 ## Layout
 

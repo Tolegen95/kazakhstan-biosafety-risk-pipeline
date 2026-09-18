@@ -1,5 +1,6 @@
 data/raw/
 data/normalized/
+data/uploads/
 __pycache__/
 *.pyc
 .venv/
