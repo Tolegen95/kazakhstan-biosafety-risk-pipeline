@@ -1,0 +1,6 @@
+data/raw/
+data/normalized/
+__pycache__/
+*.pyc
+.venv/
+.env
