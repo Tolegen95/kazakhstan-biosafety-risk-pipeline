@@ -46,6 +46,13 @@ def main() -> None:
                      help="pre-clipped multi-band GeoTIFF (default: the one tracked in this repo)")
     ap.add_argument("--n-iterations", type=int, default=25)
     ap.add_argument("--background-size", type=int, default=5000)
+    ap.add_argument("--boundary", default="data/boundaries/kazakhstan.geojson",
+                    help="GeoJSON polygon of the study territory; background points and the suitability "
+                         "surface are restricted to it. Pass an empty string to use the whole bounding box.")
+    ap.add_argument("--block-deg", type=float, default=2.0,
+                    help="side of the square blocks used for spatial block cross-validation (degrees); 0 = skip")
+    ap.add_argument("--cv-folds", type=int, default=5)
+    ap.add_argument("--cv-repeats", type=int, default=10)
     ap.add_argument("--reservoir-category", choices=["livestock", "companion", "wildlife"], default=None)
     args = ap.parse_args()
 
@@ -65,6 +72,9 @@ def main() -> None:
         covs = load_covariate_stack_from_file(args.covariate_file)
         print(f"loaded pre-clipped covariates from {args.covariate_file}: {covs.names}")
     print(f"covariate grid: {covs.shape}, valid cells: {int(covs.valid_mask().sum())}")
+    if args.boundary:
+        covs = covs.masked_to_boundary(str(HERE / args.boundary) if not os.path.isabs(args.boundary) else args.boundary)
+        print(f"masked to boundary {args.boundary}: valid cells now {int(covs.valid_mask().sum())}")
 
     module = MaxEntModule()
     ctx = RunContext(
@@ -74,6 +84,9 @@ def main() -> None:
             "covariates": covs,
             "n_iterations": args.n_iterations,
             "background_size": args.background_size,
+            "spatial_cv_block_deg": args.block_deg or None,
+            "spatial_cv_folds": args.cv_folds,
+            "spatial_cv_repeats": args.cv_repeats,
         },
     )
     warnings = module.validate(ctx)
@@ -90,6 +103,7 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "summary.json").write_text(json.dumps(result.summary, indent=2), encoding="utf-8")
     result.tables["jackknife"].to_csv(out_dir / "jackknife.csv", index=False)
+    result.tables["spatial_block_cv"].to_csv(out_dir / "spatial_block_cv.csv", index=False)
     print(f"\nsaved -> {out_dir}")
 
 

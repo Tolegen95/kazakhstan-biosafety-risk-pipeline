@@ -8,8 +8,11 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+import json
+
 import numpy as np
 import rasterio
+from rasterio.features import geometry_mask
 from rasterio.windows import from_bounds
 
 
@@ -39,6 +42,20 @@ class CovariateStack:
 
     def valid_mask(self) -> np.ndarray:
         return ~np.isnan(self.data).any(axis=0)
+
+    def masked_to_boundary(self, geojson_path: str) -> "CovariateStack":
+        """Return a copy in which every cell outside the polygon(s) of a
+        GeoJSON file (lon/lat, same CRS as the rasters) is set to NaN, so
+        that background points and the suitability surface are restricted to
+        the study territory instead of the rectangular bounding box."""
+        with open(geojson_path, encoding="utf-8") as fh:
+            gj = json.load(fh)
+        feats = gj["features"] if gj.get("type") == "FeatureCollection" else [gj]
+        geoms = [f.get("geometry", f) for f in feats]
+        outside = geometry_mask(geoms, out_shape=self.shape, transform=self.transform, invert=False)
+        data = self.data.copy()
+        data[:, outside] = np.nan
+        return CovariateStack(names=list(self.names), data=data, transform=self.transform, crs=self.crs)
 
     def random_background(self, n: int, rng: np.random.Generator) -> tuple[np.ndarray, np.ndarray]:
         """Uniform-random points among valid (non-nodata) cells -> (lons, lats)."""

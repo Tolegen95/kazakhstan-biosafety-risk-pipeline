@@ -57,7 +57,19 @@ _DEFAULT_PARAMS = {
     "n_iterations": 25,  # article uses 100; kept lower by default for a fast reference run
     "random_seed": 42,
     "l2_C": 1.0,
+    # spatial block cross-validation (Roberts et al. 2017, Ecography 40:913-929):
+    # set spatial_cv_block_deg to None to skip it
+    "spatial_cv_block_deg": 2.0,   # side of a square block, decimal degrees
+    "spatial_cv_folds": 5,
+    "spatial_cv_repeats": 10,      # independent random assignments of blocks to folds
 }
+
+
+def _block_ids(lons: np.ndarray, lats: np.ndarray, block_deg: float) -> np.ndarray:
+    """Integer id of the square block_deg x block_deg cell each point falls in."""
+    bx = np.floor(np.asarray(lons) / block_deg).astype(np.int64)
+    by = np.floor(np.asarray(lats) / block_deg).astype(np.int64)
+    return bx * 100_000 + by
 
 
 def _feature_matrix(x: np.ndarray, mean: np.ndarray, std: np.ndarray) -> np.ndarray:
@@ -88,6 +100,8 @@ class MaxEntModule(RiskModule):
         presence_x = covs.sample(events["longitude"].to_numpy(), events["latitude"].to_numpy())
         keep = ~np.isnan(presence_x).any(axis=1)
         presence_x = presence_x[keep]
+        presence_lon = events["longitude"].to_numpy()[keep]
+        presence_lat = events["latitude"].to_numpy()[keep]
         n_dropped_nodata = int((~keep).sum())
         if len(presence_x) < 10:
             raise ValueError(f"only {len(presence_x)} presence points fall on valid covariate cells -- too few to fit")
@@ -117,6 +131,61 @@ class MaxEntModule(RiskModule):
 
         all_cols = np.arange(len(covs.names))
         full_auc_mean, full_auc_std = fit_and_score(all_cols, p["n_iterations"])
+
+        # --- spatial block cross-validation -------------------------------------
+        # Presence AND background points are assigned to square spatial blocks;
+        # whole blocks are held out together, so that points close in space can
+        # never sit on both sides of a split (the source of optimistic AUC under
+        # the random split above). Standardization and the model are fitted on
+        # the training blocks only.
+        spatial_cv_table = pd.DataFrame()
+        spatial_cv = None
+        if p["spatial_cv_block_deg"]:
+            k = int(p["spatial_cv_folds"])
+            pres_blocks = _block_ids(presence_lon, presence_lat, p["spatial_cv_block_deg"])
+            bg_blocks = _block_ids(bg_lons, bg_lats, p["spatial_cv_block_deg"])
+            blocks = np.unique(np.concatenate([pres_blocks, bg_blocks]))
+            if len(np.unique(pres_blocks)) < k:
+                raise ValueError(
+                    f"presence points occupy only {len(np.unique(pres_blocks))} spatial blocks; "
+                    f"need at least spatial_cv_folds={k}. Use a smaller spatial_cv_block_deg or fewer folds."
+                )
+            rows_cv = []
+            for rep in range(int(p["spatial_cv_repeats"])):
+                fold_of_block = dict(zip(blocks.tolist(), rng.permutation(len(blocks)) % k))
+                pres_fold = np.array([fold_of_block[b] for b in pres_blocks.tolist()])
+                bg_fold = np.array([fold_of_block[b] for b in bg_blocks.tolist()])
+                for fold in range(k):
+                    p_tr, p_te = presence_x[pres_fold != fold], presence_x[pres_fold == fold]
+                    b_tr, b_te = background_x[bg_fold != fold], background_x[bg_fold == fold]
+                    if len(p_te) == 0 or len(b_te) == 0 or len(p_tr) < 5:
+                        continue  # a fold with no held-out presence (or background) has no defined AUC
+                    m, sd = p_tr.mean(axis=0), p_tr.std(axis=0)
+                    sd[sd == 0] = 1.0
+                    clf = LogisticRegression(C=p["l2_C"], max_iter=1000)
+                    clf.fit(
+                        _feature_matrix(np.concatenate([p_tr, b_tr]), m, sd),
+                        np.concatenate([np.ones(len(p_tr)), np.zeros(len(b_tr))]),
+                    )
+                    scores = clf.predict_proba(_feature_matrix(np.concatenate([p_te, b_te]), m, sd))[:, 1]
+                    auc = roc_auc_score(np.concatenate([np.ones(len(p_te)), np.zeros(len(b_te))]), scores)
+                    rows_cv.append({"repeat": rep, "fold": fold, "n_presence_test": len(p_te),
+                                    "n_background_test": len(b_te), "auc": round(float(auc), 4)})
+            spatial_cv_table = pd.DataFrame(rows_cv)
+            if len(spatial_cv_table):
+                per_repeat = spatial_cv_table.groupby("repeat")["auc"].mean()
+                spatial_cv = {
+                    "block_deg": p["spatial_cv_block_deg"],
+                    "folds": k,
+                    "repeats": int(p["spatial_cv_repeats"]),
+                    "n_blocks_with_presence": int(len(np.unique(pres_blocks))),
+                    "n_folds_evaluated": int(len(spatial_cv_table)),
+                    "auc_mean": round(float(per_repeat.mean()), 4),
+                    # spread of the k-fold mean across repeated block-to-fold assignments
+                    "auc_std_across_repeats": round(float(per_repeat.std(ddof=0)), 4),
+                    # spread across individual held-out folds (larger; shows spatial heterogeneity)
+                    "auc_std_across_folds": round(float(spatial_cv_table["auc"].std(ddof=0)), 4),
+                }
 
         jackknife_rows = []
         for i, name in enumerate(covs.names):
@@ -162,10 +231,15 @@ class MaxEntModule(RiskModule):
             "n_background": len(background_x),
             "auc_mean": round(full_auc_mean, 4),
             "auc_std": round(full_auc_std, 4),
+            "spatial_block_cv": spatial_cv,
         }
 
         return RiskResult(
             geojson=None,
-            tables={"jackknife": jackknife_table, "suitability_grid": pd.DataFrame(suitability_grid)},
+            tables={
+                "jackknife": jackknife_table,
+                "suitability_grid": pd.DataFrame(suitability_grid),
+                "spatial_block_cv": spatial_cv_table,
+            },
             summary=summary,
         )
