@@ -5,10 +5,6 @@ __pycache__/
 *.pyc
 .venv/
 .env
-branch_structure.json
-temp_auto_push.bat
-temp_interactive_push.bat
-.gitignore
 
 # Institutional registries and any record-level derivatives: never commit
 dataset/
@@ -21,3 +17,5 @@ api_uploads_*/
 *.geo
 # Local working notes
 BENCHMARK_RESULTS.md
+# Editor settings are per-user and must not be shared (auto-run tasks)
+.vscode/
