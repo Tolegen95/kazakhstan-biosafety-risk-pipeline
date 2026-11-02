@@ -1,0 +1,54 @@
+{
+  "disease": "fmd",
+  "code": {
+    "disease_specific_loader_lines": {
+      "load_anthrax": 33,
+      "load_rabies": 25,
+      "load_fmd": 37
+    },
+    "shared_lines_by_file": {
+      "pipeline/core.py": 32,
+      "pipeline/covariates.py": 84,
+      "pipeline/modules/space_time_scan.py": 231,
+      "pipeline/modules/maxent.py": 209,
+      "pipeline/modules/pca.py": 86,
+      "pipeline/modules/bayes_beta_binomial.py": 80,
+      "api/main.py": 156
+    },
+    "shared_etl_helper_lines": 156,
+    "shared_lines_total": 1034,
+    "note": "non-blank, non-comment lines; module and contract files contain no disease-specific branches"
+  },
+  "n_rows": 1221,
+  "n_rows_with_coordinates": 1221,
+  "years": [
+    1965,
+    2013
+  ],
+  "space_time_scan": {
+    "n_events_used": 1221,
+    "n_districts": 115,
+    "observed_max_llr": 64.214,
+    "observed_max_llr_p_value": 0.001,
+    "n_significant_clusters_p<0.05": 16,
+    "seconds": 9.9,
+    "warnings": []
+  },
+  "maxent": {
+    "n_presence_used": 1211,
+    "auc_random_mean": 0.8432,
+    "auc_random_sd": 0.0106,
+    "spatial_block_cv": {
+      "block_deg": 2.0,
+      "folds": 5,
+      "repeats": 10,
+      "n_blocks_with_presence": 66,
+      "n_folds_evaluated": 50,
+      "auc_mean": 0.7792,
+      "auc_std_across_repeats": 0.0209,
+      "auc_std_across_folds": 0.0535
+    },
+    "seconds": 21.2,
+    "warnings": []
+  }
+}

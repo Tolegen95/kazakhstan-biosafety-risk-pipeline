@@ -1,0 +1,21 @@
+{
+  "api_http_status": 200,
+  "web_http_status": 200,
+  "web_contains_api_base_control": true,
+  "api_modules": [
+    {
+      "name": "space_time_scan",
+      "input_kind": "point_events",
+      "produces": "cluster_table"
+    }
+  ],
+  "update_upload": {
+    "old_rows": 363,
+    "new_rows": 364,
+    "different_id": true
+  },
+  "core_source_unchanged": true,
+  "n_robustness_passed": 9,
+  "n_robustness_cases": 9,
+  "scope": "Local HTTP API plus independent static web process; no browser interaction, Docker, database, distributed services or durability test."
+}

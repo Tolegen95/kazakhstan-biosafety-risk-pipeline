@@ -1,0 +1,54 @@
+cluster_rank,districts,n_districts,centroid_lat,centroid_lon,radius_km,start_year,end_year,observed_cases,log_likelihood_ratio,p_value
+1,Mangystau/Zhanaozen city; Mangystau/Karakiya; Mangystau/Mangystau; Mangystau/Munaily,4,43.74018,52.46294,131.9,2018,2018,17,10.976,0.001
+2,East Kazakhstan/Ayagoz; East Kazakhstan/Urzhar; East Kazakhstan/Abay; East Kazakhstan/Zharma; Mangystau/Zhanaozen; East Kazakhstan/Kokpekti; East Kazakhstan/Tarbagatai,7,47.85079,82.04794,224.6,2015,2015,36,9.109,0.001
+3,Zhambyl/Taraz city; Zhambyl/Zhambyl; Zhambyl/Baizakskii; Zhambyl/Turar Ryskulov; Zhambyl/Talass; Zhambyl/Zhualy; South Kazakhstan (Turkestan)/Baidibek; South Kazakhstan (Turkestan)/Tolebi; Zhambyl/Merki; Shymkent city/Shymkent city; Zhambyl/Kordai; South Kazakhstan (Turkestan)/Shymkent city; South Kazakhstan (Turkestan)/Tulkibas; South Kazakhstan (Turkestan)/Kazygurt city; South Kazakhstan (Turkestan)/Yenbekshi; South Kazakhstan (Turkestan)/Ordabasy; South Kazakhstan (Turkestan)/Kazygurt; Zhambyl/Moiynkum; South Kazakhstan (Turkestan)/Saryagash city; South Kazakhstan (Turkestan)/Saryagash; South Kazakhstan (Turkestan)/Otyrar; South Kazakhstan (Turkestan)/Turkestan city; South Kazakhstan (Turkestan)/Sozak; South Kazakhstan (Turkestan)/Abay; South Kazakhstan (Turkestan)/Shardara; South Kazakhstan (Turkestan)/Zhetisai; South Kazakhstan (Turkestan)/Maktaral,27,42.75626,70.61568,351.2,2016,2017,58,6.485,0.002
+4,Kostanay/Karasu,1,52.42055,65.38069,0.0,2013,2013,1,4.205,0.373
+5,Almaty region/Zhambyl; Almaty region/Karasai; Almaty city/Almaty city,3,43.24055,76.91821,5.1,2016,2016,4,3.182,0.806
+6,Pavlodar/Bayanauyl; Karaganda/Osakarov; Akmola/Yereimentau; Pavlodar/Akkuly,4,51.03427,74.0212,206.7,2015,2015,8,2.872,0.92
+7,Akmola/Zerendi; Akmola/akkol; North Kazakhstan/Gabit Musrepova; Akmola/Astrakhan; Akmola/Shortandy; Akmola/Yegindykol; Kostanay/Sarykol,7,52.25573,68.87071,244.0,2014,2015,9,2.658,0.954
+8,West Kazakhstan/Zhelenovskii,1,50.20544,50.77591,0.0,2016,2016,3,2.384,0.982
+9,East Kazakhstan/Boroduliha; East Kazakhstan/Semey city; East Kazakhstan/Beskaragai; East Kazakhstan/Ulan,4,50.4586,80.37462,91.2,2017,2017,9,2.158,1.0
+10,West Kazakhstan/Burli; West Kazakhstan/Shyngyrlau; West Kazakhstan/Oral; West Kazakhstan/Syrym; West Kazakhstan/Oral city; West Kazakhstan/Terekti; West Kazakhstan/Baiterek; West Kazakhstan/Akzhaiyk; West Kazakhstan/Karatobe; Aktobe/Kobda,10,50.53696,52.47322,172.5,2018,2018,11,2.137,1.0
+11,Almaty region/Raiymbek,1,42.6988,79.46949,0.0,2017,2017,2,1.93,1.0
+12,Kostanay/Fedorov; Kostanay/Karabalyk,2,53.74848,62.50206,43.4,2018,2018,3,1.903,1.0
+13,Aktobe/Irgiz,1,48.6313,60.81583,0.0,2018,2018,3,1.903,1.0
+14,Aktobe/Temir city; Aktobe/Mugalzhar; Aktobe/Aktobe; Aktobe/Aktobe city; Aktobe/Kargaly; Aktobe/Hromtau; Aktobe/Baiganin,7,49.58412,57.10055,207.7,2016,2016,5,1.853,1.0
+15,Atyrau/Zhylyoi; Aktobe/Oiyl; Atyrau/Atyrau; Atyrau/Oiyl,4,46.56229,53.63816,167.7,2017,2017,4,1.753,1.0
+16,Aktobe/Shalkar,1,47.57709,59.42958,0.0,2017,2017,3,1.695,1.0
+17,Pavlodar/Sherbakty; Pavlodar/Uspen,2,52.89246,77.96656,93.3,2016,2016,2,1.588,1.0
+18,Kostanay/Zhetykara; Kostanay/Kamysty,2,52.07465,61.48444,47.3,2016,2016,2,1.588,1.0
+19,Atyrau/Makhambet,1,47.69253,51.66235,0.0,2018,2018,3,1.29,1.0
+20,Karaganda/Karazhal; Karaganda/Nurinskii,2,50.47795,71.09135,0.0,2018,2018,2,1.267,1.0
+21,Almaty region/Aksu,1,45.20394,78.74299,0.0,2016,2016,4,1.221,1.0
+22,Atyrau/Inder,1,48.55022,51.61662,0.0,2015,2015,3,1.069,1.0
+23,Kostanay/Auliekol,1,52.14075,63.90055,0.0,2014,2015,3,1.069,1.0
+24,Kostanay/Altynsarin,1,53.14183,63.61933,0.0,2017,2017,1,0.964,1.0
+25,Pavlodar/Aktogai,1,52.51067,75.2894,0.0,2017,2017,1,0.964,1.0
+26,West Kazakhstan/Zhangalinsk,1,49.38019,50.63544,0.0,2017,2017,1,0.964,1.0
+27,West Kazakhstan/Zhanibek,1,49.42301,46.85172,0.0,2016,2016,1,0.793,1.0
+28,Kostanay/Arkalykskii,1,52.66565,65.52165,0.0,2016,2016,1,0.793,1.0
+29,Kostanay/Nauryzym,1,51.65751,64.22299,0.0,2016,2016,1,0.793,1.0
+30,Kostanay/Karabulak,1,53.35332,62.05924,0.0,2014,2015,2,0.712,1.0
+31,Kyzylorda/Syrdariya; Kyzylorda/Shieli,2,44.62601,66.27784,124.0,2014,2015,2,0.712,1.0
+32,Kostanay/Zhangeldi; Kostanay/Mendykara,2,50.38309,62.67451,202.7,2015,2015,2,0.712,1.0
+33,West Kazakhstan/Zhanakala,1,49.646,50.64061,0.0,2018,2018,1,0.633,1.0
+34,West Kazakhstan/Taskala,1,51.10686,50.29109,0.0,2018,2018,1,0.633,1.0
+35,Pavlodar/Terenkol,1,53.43702,76.84047,0.0,2018,2018,1,0.633,1.0
+36,Almaty region/Kerbulak,1,44.10908,77.85123,0.0,2017,2018,5,0.615,1.0
+37,Karaganda/Shet,1,47.98488,74.04039,0.0,2017,2018,2,0.585,1.0
+38,Akmola/Tselinograd,1,51.22522,71.03516,0.0,2018,2018,3,0.574,1.0
+39,Kostanay/Uzynkol,1,54.18725,65.36336,0.0,2017,2017,1,0.436,1.0
+40,Kostanay/Denisov,1,51.81562,63.19641,0.0,2018,2018,2,0.382,1.0
+41,Atyrau/Kyzylkoga,1,48.39628,53.10819,0.0,2016,2016,2,0.366,1.0
+42,Pavlodar/Irtysh,1,52.16412,72.73524,0.0,2014,2015,1,0.355,1.0
+43,Almaty region/Balkhash,1,44.56531,76.71815,0.0,2015,2015,1,0.355,1.0
+44,Almaty region/Panfilov,1,44.17001,80.00595,0.0,2015,2015,1,0.355,1.0
+45,South Kazakhstan (Turkestan)/Kentau,1,49.78333,78.1,0.0,2015,2015,1,0.355,1.0
+46,Kostanay/Kostanai city,1,53.21449,63.63208,0.0,2016,2016,1,0.304,1.0
+47,Karaganda/Aktogai,1,47.37623,74.5585,0.0,2015,2015,2,0.275,1.0
+48,Atyrau/Kurmangazy,1,47.11356,48.79011,0.0,2015,2015,2,0.275,1.0
+49,Atyrau/Isatai,1,47.08087,50.75726,0.0,2016,2016,2,0.205,1.0
+50,Akmola/Arshaly,1,50.69696,72.13273,0.0,2018,2018,2,0.187,1.0
+51,West Kazakhstan/Bokeiorda,1,49.54216,49.03882,0.0,2014,2016,3,0.092,1.0
+52,Almaty region/Karatal,1,45.02314,78.26481,0.0,2014,2015,2,0.075,1.0
+53,Akmola/Korgalzhyn,1,50.56179,70.01346,0.0,2014,2015,2,0.075,1.0

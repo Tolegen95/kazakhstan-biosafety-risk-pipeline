@@ -1,0 +1,49 @@
+{
+  "anthrax": {
+    "normalized": 4307,
+    "valid_coordinates": 4183,
+    "valid_coordinates_and_year": 4182,
+    "scan_used": 4179,
+    "masked_presence": 4031,
+    "raster_or_mask_excluded": 152,
+    "year_min": 1933,
+    "year_max": 2014,
+    "legacy_duplicate_candidates": 737,
+    "year_aware_duplicate_candidates": 122,
+    "conservative_duplicate_candidates": 66,
+    "year_only_records": 2139
+  },
+  "rabies": {
+    "normalized": 363,
+    "valid_coordinates": 363,
+    "valid_coordinates_and_year": 363,
+    "scan_used": 363,
+    "masked_presence": 360,
+    "raster_or_mask_excluded": 3,
+    "year_min": 2013,
+    "year_max": 2018,
+    "legacy_duplicate_candidates": 14,
+    "year_aware_duplicate_candidates": 14,
+    "conservative_duplicate_candidates": 12,
+    "year_only_records": 0
+  },
+  "fmd": {
+    "normalized": 1221,
+    "valid_coordinates": 1221,
+    "valid_coordinates_and_year": 1221,
+    "scan_used": 1221,
+    "masked_presence": 1211,
+    "raster_or_mask_excluded": 10,
+    "year_min": 1965,
+    "year_max": 2013,
+    "legacy_duplicate_candidates": 6,
+    "year_aware_duplicate_candidates": 6,
+    "conservative_duplicate_candidates": 0,
+    "year_only_records": 8
+  },
+  "boundary_exclusions": {
+    "n": 152,
+    "inside_vector_polygon": 32,
+    "outside_vector_polygon": 120
+  }
+}

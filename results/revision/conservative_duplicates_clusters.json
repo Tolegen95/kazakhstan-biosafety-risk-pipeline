@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "module": "space_time_scan",
+    "disease": "anthrax",
+    "params": {
+      "max_spatial_fraction": 0.5,
+      "max_temporal_fraction": 0.5,
+      "n_permutations": 999,
+      "random_seed": 42,
+      "max_clusters_reported": 200
+    },
+    "n_events_used": 4114,
+    "n_events_dropped": 127,
+    "n_districts": 167,
+    "n_candidate_zones": 1653,
+    "n_candidate_windows": 2542,
+    "observed_max_llr": 168.027,
+    "observed_max_llr_p_value": 0.001,
+    "n_significant_clusters_p<0.05": 11
+  },
+  "primary_jaccard": 1.0,
+  "union_jaccard": 1.0
+}

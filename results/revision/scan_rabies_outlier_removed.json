@@ -1,0 +1,20 @@
+{
+  "module": "space_time_scan",
+  "disease": "rabies",
+  "params": {
+    "max_spatial_fraction": 0.5,
+    "max_temporal_fraction": 0.5,
+    "n_permutations": 999,
+    "random_seed": 42,
+    "max_clusters_reported": 200
+  },
+  "n_events_used": 362,
+  "n_events_dropped": 0,
+  "n_districts": 126,
+  "n_candidate_zones": 1188,
+  "n_candidate_windows": 15,
+  "observed_max_llr": 10.976,
+  "observed_max_llr_p_value": 0.001,
+  "n_significant_clusters_p<0.05": 3,
+  "seconds": 0.3200976250227541
+}

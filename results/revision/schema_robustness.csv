@@ -1,0 +1,10 @@
+case,expected_status,actual_status,passed,status,n_events_used
+original,200.0,200.0,True,,
+reordered_columns,200.0,200.0,True,,
+extra_column,200.0,200.0,True,,
+numeric_strings,200.0,200.0,True,,
+missing_required_column,422.0,422.0,True,,
+unknown_disease_value,200.0,200.0,True,,
+unparseable_latitude,,,True,done,362.0
+missing_year_value,,,True,done,362.0
+unsupported_semicolon_delimiter,,422.0,True,,

@@ -1,0 +1,22 @@
+{
+  "disease": "rabies",
+  "reservoir_category": "companion",
+  "n_presence": 150,
+  "n_background": 5000,
+  "module": {
+    "auc_random_mean": 0.8778,
+    "auc_random_sd": 0.0334,
+    "auc_block_mean": 0.8002,
+    "auc_block_sd_across_repeats": 0.0162,
+    "seconds_total": 0.4
+  },
+  "maxent": {
+    "auc_random_mean": 0.8832,
+    "auc_random_sd": 0.0293,
+    "auc_block_mean": 0.772,
+    "auc_block_sd_across_repeats": 0.0404,
+    "seconds_total": 38.3
+  },
+  "spearman_surfaces": 0.8058,
+  "top20pct_overlap_jaccard": 0.6107
+}

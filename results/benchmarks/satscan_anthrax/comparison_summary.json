@@ -1,0 +1,10 @@
+{
+  "disease": "anthrax",
+  "n_significant_satscan": 13,
+  "n_significant_module": 11,
+  "primary_llr_satscan": 177.211,
+  "primary_llr_module": 171.075,
+  "primary_jaccard": 0.909,
+  "satscan_clusters_matched_jaccard_ge_0.5": 8,
+  "satscan_clusters_with_any_overlap": 9
+}

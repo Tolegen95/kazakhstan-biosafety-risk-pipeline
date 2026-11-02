@@ -1,0 +1,3 @@
+scenario,n_events,significant,primary_llr,primary_p,primary_jaccard,union_jaccard
+year_aware_dedup,4060,11,166.815,0.001,0.8626237623762376,0.940926024481107
+legacy_dedup,3474,8,164.793,0.001,0.8947368421052632,0.6750104297037964

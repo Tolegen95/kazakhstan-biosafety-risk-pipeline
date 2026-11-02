@@ -1,0 +1,5 @@
+elapid {'beta_multiplier': 0.5, 'mean': np.float64(0.6878412942029124), 'sd_repeat': np.float64(0.01642213005965419), 'seconds': 568.1694408330368}
+elapid {'beta_multiplier': 1, 'mean': np.float64(0.6933221097081116), 'sd_repeat': np.float64(0.011541406332731666), 'seconds': 319.755975667038}
+elapid {'beta_multiplier': 2, 'mean': np.float64(0.6966670689430732), 'sd_repeat': np.float64(0.008900477435850611), 'seconds': 236.22515870904317}
+elapid {'beta_multiplier': 4, 'mean': np.float64(0.6985602895047313), 'sd_repeat': np.float64(0.007691281665207854), 'seconds': 212.1458926249761}
+ELAPID DONE

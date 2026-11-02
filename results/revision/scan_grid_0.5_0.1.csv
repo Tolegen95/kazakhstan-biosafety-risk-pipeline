@@ -1,0 +1,55 @@
+cluster_rank,districts,n_districts,centroid_lat,centroid_lon,radius_km,start_year,end_year,observed_cases,log_likelihood_ratio,p_value
+1,North Kazakhstan/Taiynshinski; North Kazakhstan/Akkainski; Akmola/Kokshetau; North Kazakhstan/Esilski; Akmola/Zerendinski; North Kazakhstan/Magzhana Zhumabaeva; North Kazakhstan/Kyzylzharski; Akmola/Burabaiski; North Kazakhstan/Aiyrtauski; North Kazakhstan/Mamlutski; North Kazakhstan/Shal Akynski; Akmola/Enbekshilderski; North Kazakhstan/Akzharski; North Kazakhstan/Zhambylski; North Kazakhstan/Ualikhanovski; Akmola/Sandyktauski; North Kazakhstan/Tselinyi; Akmola/Bulandynski; North Kazakhstan/Temiryzevski; Akmola/Zhaksynski; Akmola/Akkolski; Akmola/Atbasarski; Akmola/Shortandinski; Akmola/Stepnogorsk; Akmola/Astrahkanski; Kostanaiskay/Sarykolski; Kostanaiskay/Uzunkolski,27,53.0653,68.98494,294.2,1940,1947,152,129.851,0.001
+2,Kostanaiskay/Auliekolski; Kostanaiskay/Naurzumski; Kostanaiskay/Taranovski,3,52.20817,63.67026,92.8,1948,1952,39,40.42,0.001
+3,East Kazakhstan/Zyrynovski; East Kazakhstan/Katon-Karagaiski; East Kazakhstan/Glubokovski; East Kazakhstan/Kurchumski; East Kazakhstan/Shemonanhinski; East Kazakhstan/Prigorodnyi; East Kazakhstan/Kokpektinski; East Kazakhstan/Zharminski; East Kazakhstan/Borodulinski; East Kazakhstan/Tarbagataiski; East Kazakhstan/Zaisanski; East Kazakhstan/Ulanski; East Kazakhstan/Semipalatinski; East Kazakhstan/Abaiski; East Kazakhstan/Urdzharski; East Kazakhstan/Aygoski; East Kazakhstan/Beskaragaiski; Almatinskay/Alakolski; Pavlodarskay/Lebyazhinski; Pavlodarskay/Maiski; Almatinskay/Sarkandski; Pavlodarskay/Sherbaktinski; Almatinskay/kiziltu; Pavlodarskay/Pavlodarski; Pavlodarskay/Uspenski; Pavlodarskay/Aksuski; Karagandinskay/Karkaralinski,27,48.5156,81.2613,603.7,1953,1959,175,33.571,0.001
+4,Zhambyl/Sarysuski; Zhambyl/Talasski; South Kazakhstan (Turkestan)/Tolebiski,3,44.20288,70.42561,121.2,1986,1993,32,29.862,0.001
+5,South Kazakhstan (Turkestan)/Sairamski,1,42.51553,69.77891,0.0,1933,1937,16,28.767,0.001
+6,Kostanaiskay/Kostanaiski; Kostanaiskay/Altynsarinski,2,53.15636,63.80468,59.6,1935,1938,12,28.633,0.001
+7,Kyzylorda/Karmakshinski; Kyzylorda/Zhalagashski,2,45.03561,64.48364,48.5,1945,1950,15,23.941,0.001
+8,Atyrauskay/Kurmangazinski; West Kazakhstan/Zhanibekski; West Kazakhstan/Bokeiordinski; Atyrauskay/Atyrau; Mangystau/Tupkarganski; Atyrauskay/Inderski; Almatinskay/Balhashski; West Kazakhstan/Zhangalinski; Atyrauskay/Mambetski; West Kazakhstan/Kaztalovski; Atyrauskay/Zhylyoiski; Mangystau/Mangistauski; West Kazakhstan/Taskalinski; Atyrauskay/Kyzylkoginski; Mangystau/Karakiykski; West Kazakhstan/Akzhaikski; Aktubinskay/Uilski; West Kazakhstan/Karatobinski; West Kazakhstan/Syrymski; West Kazakhstan/Terektinski; West Kazakhstan/Zelenovski; Aktubinskay/Baiganinski; Aktubinskay/Temirski; West Kazakhstan/Chingirlauski; West Kazakhstan/Burlinski; Almatinskay/Kerbulakski; Aktubinskay/Kobdinski,27,49.83085,52.67792,663.0,1966,1967,82,19.916,0.001
+9,South Kazakhstan (Turkestan)/Kazgurtski; South Kazakhstan (Turkestan)/Tulkubaski; South Kazakhstan (Turkestan)/Shymkentski,3,42.03291,70.26426,79.6,2000,2001,22,19.304,0.001
+10,Pavlodarskay/Zhelezinski; Pavlodarskay/Irtyshski; Pavlodarskay/Aktogaiski; Pavlodarskay/Kachirski,4,53.20199,75.19579,113.1,1968,1969,23,18.666,0.001
+11,Zhambyl/Kordaski; Zhambyl/Chyiski; Almatinskay/Zhambylski,3,43.28241,75.0736,109.7,1985,1992,30,15.268,0.001
+12,Karagandinskay/Bukharzhyrauski,1,50.05897,73.34295,0.0,1982,1983,7,13.681,0.002
+13,Kostanaiskay/Amangeldinski,1,50.1685,65.42943,0.0,1937,1939,6,12.41,0.01
+14,Kyzylorda/Kyzylordinski,1,44.82945,65.52149,0.0,1956,1958,13,12.099,0.016
+15,South Kazakhstan (Turkestan)/Saryagashski,1,42.4402,69.67007,0.0,1959,1960,27,11.512,0.024
+16,Akmola/Tselinogradski; Akmola/Arshalynski; Akmola/Korgalzhynski,3,50.87253,71.01588,65.8,1944,1951,19,10.736,0.054
+17,Almatinskay/Raiymbekski; Almatinskay/Uygurski; Almatinskay/Panfilovski; Almatinskay/Talgarski; Almatinskay/Ilyiski; Almatinskay/Enbekshikazahski; Almatinskay/Karasayski,7,43.3693,77.40176,229.8,1977,1982,37,10.67,0.062
+18,Kyzylorda/Kazalinski; Kyzylorda/Aralski; Kyzylorda/Syrdarinski,3,45.46483,61.80055,163.7,1955,1956,9,10.029,0.105
+19,South Kazakhstan (Turkestan)/Turkestanski; South Kazakhstan (Turkestan)/Kentauski,2,43.41473,68.10707,31.0,1955,1957,12,9.722,0.137
+20,Zhambyl/Moinkumski,1,44.22192,72.89103,0.0,1971,1971,6,9.438,0.189
+21,Akmola/Esilski,1,51.80693,66.42601,0.0,1949,1949,3,9.405,0.195
+22,Karagandinskay/Osakarovski,1,50.58431,72.89657,0.0,1951,1957,13,8.62,0.377
+23,South Kazakhstan (Turkestan)/Ordabasinski,1,44.55624,66.3899,0.0,1996,2001,5,8.495,0.432
+24,Aktubinskay/Aitekebiski; Kostanaiskay/Kamystinski; Aktubinskay/Irgizki; Kostanaiskay/Dzhangeldinski,4,50.61207,62.22653,183.1,1968,1969,18,8.195,0.546
+25,Zhambyl/Turar-Ryskulovski; Zhambyl/Merkenski; Zhambyl/Bazayski,3,42.87962,72.68919,77.2,1962,1963,23,8.137,0.575
+26,Aktubinskay/Martukski; Aktubinskay/Aktobe; Aktubinskay/Hromtauski; Aktubinskay/Alginski,4,50.30449,57.09014,74.4,1992,1995,6,7.935,0.644
+27,South Kazakhstan (Turkestan)/Suzakski,1,44.44559,66.30369,0.0,1972,1979,18,7.457,0.825
+28,Karagandinskay/Nurinski,1,50.24118,71.20294,0.0,1975,1975,5,7.395,0.838
+29,Zhambyl/Zhualinski,1,42.72306,70.61772,0.0,1983,1984,6,7.056,0.915
+30,Kostanaiskay/Fedorovski,1,53.63134,62.79694,0.0,1950,1954,8,6.986,0.929
+31,Kostanaiskay/Karasuiski,1,52.39016,65.45133,0.0,1962,1962,6,6.655,0.972
+32,Almatinskay/Eskeldinski; Almatinskay/Aksuiski,2,45.20238,78.96032,28.4,1963,1963,6,6.404,0.994
+33,Kostanaiskay/Karabalykski,1,53.51661,61.79308,0.0,1973,1976,6,6.328,0.997
+34,Zhambyl/Zhambylski,1,42.99397,71.17679,0.0,1981,1981,3,6.151,0.999
+35,Karagandinskay/Ulytauski; Kostanaiskay/Arkalykski,2,49.32325,66.95754,229.1,1961,1965,18,5.984,1.0
+36,Karagandinskay/Zhanaarkinski; Karagandinskay/Shetski,2,48.23902,72.17886,174.2,1968,1970,13,5.598,1.0
+37,Pavlodarskay/Ekibastuzski,1,52.07111,74.45222,0.0,1979,1982,4,4.837,1.0
+38,Kostanaiskay/Denisovski,1,52.74667,61.61637,0.0,1975,1975,3,4.78,1.0
+39,Kostanaiskay/Zhitikarinski,1,51.94916,61.03156,0.0,1972,1973,4,4.644,1.0
+40,Kyzylorda/Zhanakorganski,1,43.71233,67.31714,0.0,1947,1947,3,4.62,1.0
+41,Aktubinskay/Mugolzharski,1,49.17101,57.94348,0.0,1985,1990,5,4.566,1.0
+42,Aktubinskay/Kargalinski,1,50.73438,57.88854,0.0,1975,1982,8,4.312,1.0
+43,South Kazakhstan (Turkestan)/Maktaralski,1,40.74167,68.325,0.0,1999,1999,1,4.166,1.0
+44,Akmola/Egindykolski,1,51.0712,69.65228,0.0,1937,1939,2,3.99,1.0
+45,Kyzylorda/Shielinski,1,44.16064,66.74857,0.0,1957,1960,3,3.882,1.0
+46,Karagandinskay/Aktogaiski,1,48.07564,75.3,0.0,1960,1965,8,3.405,1.0
+47,Almatinskay/Koksuski,1,44.85417,76.73438,0.0,1969,1973,7,3.277,1.0
+48,Akmola/Erementauski,1,51.51218,72.56903,0.0,1967,1971,8,3.207,1.0
+49,Almatinskay/Karatayski,1,45.25741,77.91111,0.0,1981,1982,2,2.923,1.0
+50,South Kazakhstan (Turkestan)/Otrarski,1,42.42222,68.74444,0.0,1962,1963,2,2.586,1.0
+51,Akmola/Zharkainski,1,51.10278,66.62593,0.0,1980,1981,2,2.536,1.0
+52,Pavlodarskay/Baynaulski,1,50.48856,75.15678,0.0,1974,1974,2,2.213,1.0
+53,Kostanaiskay/Mendykarinski,1,53.91948,64.22969,0.0,1974,1976,4,2.154,1.0
+54,Aktubinskay/Shalkarski,1,47.5625,59.92083,0.0,1960,1962,2,1.885,1.0

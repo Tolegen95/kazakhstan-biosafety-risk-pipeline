@@ -1,0 +1,220 @@
+                                 _____________________________
+
+                                        SaTScan v10.3.3
+                                 _____________________________
+
+
+Program run on: Sat Oct 10 00:14:08 2026
+
+Retrospective Space-Time analysis
+scanning for clusters with high rates
+using the Space-Time Permutation model.
+_______________________________________________________________________________________________
+
+SUMMARY OF DATA
+
+Study period.......................: 2013/1/1 to 2018/12/31
+Number of locations................: 125
+Total number of cases..............: 363
+_______________________________________________________________________________________________
+
+CLUSTERS DETECTED
+
+1.Location IDs included.: D0071D0075D0073D0072
+  Coordinates / radius..: (43.244853 N, 52.482539 E) / 110.70 km
+  Span..................: 132.19 km
+  Time frame............: 2018/1/1 to 2018/12/31
+  Number of cases.......: 17
+  Expected cases........: 4.26
+  Observed / expected...: 3.99
+  Test statistic........: 11.010829
+  P-value...............: 0.0000026
+
+2.Location IDs included.: D0039D0046D0047D0074D0042, D0044, D0038, D0089
+  Coordinates / radius..: (47.740954 N, 80.174221 E) / 273.10 km
+  Span..................: 489.78 km
+  Time frame............: 2015/1/1 to 2015/12/31
+  Number of cases.......: 38
+  Expected cases........: 17.36
+  Observed / expected...: 2.19
+  Test statistic........: 9.757671
+  P-value...............: 0.000020
+
+3.Location IDs included.: D0119D0120D0121D0118D0125, D0123, D0124, D0122, D0126, D0029, D0024,
+                          D0021, D0086, D0098, D0023, D0084, D0096, D0099, D0088, D0087, D0101,
+                          D0091, D0026, D0094, D0093, D0097, D0100, D0092, D0025, D0085, D0095,
+                          D0022, D0028, D0102, D0090
+  Coordinates / radius..: (42.975808 N, 73.453757 E) / 495.12 km
+  Span..................: 983.59 km
+  Time frame............: 2016/1/1 to 2017/12/31
+  Number of cases.......: 72
+  Expected cases........: 45.40
+  Observed / expected...: 1.59
+  Test statistic........: 7.746155
+  P-value...............: 0.00051
+
+4.Location IDs included.: D0006D0002D0003D0005D0009, D0049, D0050, D0004, D0001, D0008, D0007,
+                          D0051, D0080, D0076, D0061, D0054, D0065, D0064, D0055, D0079
+  Coordinates / radius..: (51.057352 N, 69.477396 E) / 406.87 km
+  Span..................: 804.87 km
+  Time frame............: 2013/1/1 to 2015/12/31
+  Number of cases.......: 27
+  Expected cases........: 15.97
+  Observed / expected...: 1.69
+  Test statistic........: 3.327758
+  P-value...............: 0.471
+
+5.Location IDs included.: D0016D0110D0010D0011D0107, D0106, D0017, D0111, D0015, D0020, D0013,
+                          D0103, D0108, D0109, D0113, D0034, D0104, D0012, D0117
+  Coordinates / radius..: (50.608034 N, 55.315433 E) / 324.55 km
+  Span..................: 577.08 km
+  Time frame............: 2016/1/1 to 2016/12/31
+  Number of cases.......: 15
+  Expected cases........: 7.95
+  Observed / expected...: 1.89
+  Test statistic........: 2.543261
+  P-value...............: 0.901
+
+6.Location IDs included.: D0041D0043D0040D0045
+  Coordinates / radius..: (50.718085 N, 80.747326 E) / 91.12 km
+  Span..................: 157.00 km
+  Time frame............: 2017/1/1 to 2017/12/31
+  Number of cases.......: 9
+  Expected cases........: 4.13
+  Observed / expected...: 2.18
+  Test statistic........: 2.171059
+  P-value...............: 0.985
+
+Note: The coordinates file contains location IDs with identical coordinates that were combined
+into one location. In the optional output files, combined locations are represented by a single
+location ID as follows:
+-----------------------------------------------------------------------------------------------
+D0049 : D0050
+_______________________________________________________________________________________________
+
+ADDITIONAL RESULTS FILES
+
+Google Maps                      : data/normalized/results/satscan/rabies/rabies.clustermap.html
+Shapefile                        : data/normalized/results/satscan/rabies/rabies.col.shp
+Shapefile                        : data/normalized/results/satscan/rabies/rabies.gis.shp
+Cluster Information              : data/normalized/results/satscan/rabies/rabies.col.dbf
+Stratified Cluster File          : data/normalized/results/satscan/rabies/rabies.sci.dbf
+Location Information             : data/normalized/results/satscan/rabies/rabies.gis.dbf
+Risk Estimates for Each Location : data/normalized/results/satscan/rabies/rabies.rr.dbf
+_______________________________________________________________________________________________
+
+PARAMETER SETTINGS
+
+Input
+-----
+  Case File        : data/normalized/results/satscan/rabies/rabies.cas
+  Time Precision   : Year
+  Start Date       : 2013/1/1
+  End Date         : 2018/12/31
+  Coordinates File : data/normalized/results/satscan/rabies/rabies.geo
+  Coordinates      : Latitude/Longitude
+
+Analysis
+--------
+  Type of Analysis        : Retrospective Space-Time
+  Probability Model       : Space-Time Permutation
+  Scan For Areas With     : High Rates
+  Time Aggregation Units  : Year
+  Time Aggregation Length : 1
+
+Output
+------
+  Main Results File                : data/normalized/results/satscan/rabies/rabies.txt
+  HTML file for Google Map         : No
+  KML file for Google Earth        : Yes
+  Shapefile for GIS software       : Yes
+  HTML file for Cartesian map      : No
+  Cluster Information              : No (ASCII), Yes (dBase)
+  Stratified Cluster Information   : No (ASCII), Yes (dBase)
+  Location Information             : No (ASCII), Yes (dBase)
+  Risk Estimates for Each Location : No (ASCII), Yes (dBase)
+  Simulated Test Statistics        : No (ASCII), No (dBase)
+
+Data Checking
+-------------
+  Temporal Data Check     : Check to ensure that all cases and controls are within the specified temporal study period.
+  Geographical Data Check : Check to ensure that all observations (cases, controls and populations) are within the specified geographical area.
+
+Spatial Neighbors
+-----------------
+  Specify neighbors through a non-Euclidean neighbors file : No
+  Specify a meta location file                             : No
+  Observations with Multiple Locations                     : One location per observation.
+
+Locations Network
+-----------------
+  Use Locations Network File : No
+
+Spatial Window
+--------------
+  Maximum Spatial Cluster Size : 50 percent of population at risk
+  Window Shape                 : Circular
+
+Temporal Window
+---------------
+  Minimum Temporal Cluster Size : 1 Year
+  Maximum Temporal Cluster Size : 50 percent of study period
+
+Cluster Restrictions
+--------------------
+  Minimum Cases in Cluster for High Rates : 2
+  Restrict High Rate Clusters             : No
+
+Space And Time Adjustments
+--------------------------
+  Adjust for Weekly Trends, Nonparametric : No
+
+Inference
+---------
+  P-Value Reporting                  : Default Combination
+  Number of Replications             : 999
+  Adjusting for More Likely Clusters : No
+
+Drilldown
+---------
+  Same Design as Main Analysis : No
+  Purely Spatial Bernoulli     : No
+
+Spatial Output
+--------------
+  Automatically Launch Map                  : Yes
+  Report Hierarchical Clusters              : Yes
+  Criteria for Reporting Secondary Clusters : No Geographical Overlap
+  Restrict Reporting to Smaller Clusters    : No
+
+Temporal Graphs
+---------------
+  Produce Temporal Graphs : No
+
+Other Output
+------------
+  Report Critical Values  : No
+  Report Monte Carlo Rank : No
+  User Defined Title      : 
+
+Notifications
+-------------
+  Always Send Email                      : No
+  Send Email with Results Meeting Cutoff : No
+
+Run Options
+-----------
+  Processor Usage   : All Available Processors
+  Suppress Warnings : No
+  Logging Analysis  : No
+
+System
+------
+  Parameters Version : 10.3.0
+_______________________________________________________________________________________________
+
+RUN INFORMATION
+
+Program completed  : Sat Oct 10 00:14:11 2026
+Total Running Time : 3 seconds
+Processor Usage    : 8 processors

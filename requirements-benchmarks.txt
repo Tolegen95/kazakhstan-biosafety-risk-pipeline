@@ -1,0 +1,3 @@
+elapid>=1.0
+scipy
+dbfread

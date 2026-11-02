@@ -1,0 +1,22 @@
+{
+  "disease": "rabies",
+  "reservoir_category": "livestock",
+  "n_presence": 197,
+  "n_background": 5000,
+  "module": {
+    "auc_random_mean": 0.7285,
+    "auc_random_sd": 0.0311,
+    "auc_block_mean": 0.6361,
+    "auc_block_sd_across_repeats": 0.0045,
+    "seconds_total": 0.5
+  },
+  "maxent": {
+    "auc_random_mean": 0.7626,
+    "auc_random_sd": 0.0277,
+    "auc_block_mean": 0.6411,
+    "auc_block_sd_across_repeats": 0.0198,
+    "seconds_total": 54.3
+  },
+  "spearman_surfaces": 0.7702,
+  "top20pct_overlap_jaccard": 0.4889
+}

@@ -1,0 +1,54 @@
+{
+  "anthrax": {
+    "reported_clusters": 32,
+    "primary_p_text": "< 0.00000000000000001",
+    "primary_p_dbf": 1e-17,
+    "created_files": [
+      "SETTINGS.txt",
+      "anthrax.cas",
+      "anthrax.clustermap.html",
+      "anthrax.col.dbf",
+      "anthrax.col.prj",
+      "anthrax.col.shp",
+      "anthrax.col.shx",
+      "anthrax.geo",
+      "anthrax.gis.dbf",
+      "anthrax.gis.prj",
+      "anthrax.gis.shp",
+      "anthrax.gis.shx",
+      "anthrax.prm",
+      "anthrax.rr.dbf",
+      "anthrax.sci.dbf",
+      "anthrax.txt",
+      "comparison.csv",
+      "comparison_summary.json",
+      "locations.csv"
+    ]
+  },
+  "rabies": {
+    "reported_clusters": 6,
+    "primary_p_text": "0.0000026",
+    "primary_p_dbf": 2.56916543728e-06,
+    "created_files": [
+      "SETTINGS.txt",
+      "comparison.csv",
+      "comparison_summary.json",
+      "locations.csv",
+      "rabies.cas",
+      "rabies.clustermap.html",
+      "rabies.col.dbf",
+      "rabies.col.prj",
+      "rabies.col.shp",
+      "rabies.col.shx",
+      "rabies.geo",
+      "rabies.gis.dbf",
+      "rabies.gis.prj",
+      "rabies.gis.shp",
+      "rabies.gis.shx",
+      "rabies.prm",
+      "rabies.rr.dbf",
+      "rabies.sci.dbf",
+      "rabies.txt"
+    ]
+  }
+}

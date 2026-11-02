@@ -1,0 +1,31 @@
+{
+  "baseline": {
+    "n_presence": 4031,
+    "mean": 0.7628602968643698,
+    "sd_repeat": 0.003814840391958165,
+    "sd_fold": 0.041253261142787594
+  },
+  "covariate_names": [
+    "elevation",
+    "bio1",
+    "bio10",
+    "bio11",
+    "bio12",
+    "bio13",
+    "bio14",
+    "bio15",
+    "bio16",
+    "bio17",
+    "bio18",
+    "bio19",
+    "bio2",
+    "bio3",
+    "bio4",
+    "bio5",
+    "bio6",
+    "bio7",
+    "bio8",
+    "bio9"
+  ],
+  "finished": true
+}

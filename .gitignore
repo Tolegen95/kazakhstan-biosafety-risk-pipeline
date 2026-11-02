@@ -9,3 +9,15 @@ branch_structure.json
 temp_auto_push.bat
 temp_interactive_push.bat
 .gitignore
+
+# Institutional registries and any record-level derivatives: never commit
+dataset/
+*.xlsx
+*_normalized.csv
+focus_unified.csv
+private_api_uploads/
+api_uploads_*/
+*.cas
+*.geo
+# Local working notes
+BENCHMARK_RESULTS.md

@@ -1,0 +1,4 @@
+satscan_cluster,satscan_years,satscan_n_districts,satscan_cases,satscan_llr,satscan_p,module_rank,module_years,module_n_districts,module_cases,module_llr,jaccard_district_years
+1,2018-2018,4,17,11.01,2.56916543728e-06,1,2018-2018,4,17,11.01,1.0
+2,2015-2015,8,38,9.76,1.957217405824e-05,2,2014-2015,7,37,9.38,0.467
+3,2016-2017,35,72,7.75,0.00050937950274121,3,2016-2017,27,58,6.55,0.771

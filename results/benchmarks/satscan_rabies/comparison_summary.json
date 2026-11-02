@@ -1,0 +1,10 @@
+{
+  "disease": "rabies",
+  "n_significant_satscan": 3,
+  "n_significant_module": 3,
+  "primary_llr_satscan": 11.011,
+  "primary_llr_module": 11.011,
+  "primary_jaccard": 1.0,
+  "satscan_clusters_matched_jaccard_ge_0.5": 2,
+  "satscan_clusters_with_any_overlap": 3
+}

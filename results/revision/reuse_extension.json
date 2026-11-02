@@ -1,0 +1,14 @@
+{
+  "adapter_nonblank_noncomment_lines": 19,
+  "adapter_files_added": 1,
+  "existing_core_files_modified": 0,
+  "new_contract_input_kinds": 0,
+  "new_contract_output_kinds": 0,
+  "n_prior_configurations": 16,
+  "loader_lines_including_definition": {
+    "load_anthrax": 33,
+    "load_rabies": 25,
+    "load_fmd": 37
+  },
+  "scope": "Delegates an existing estimator; tests CLI interface integration only, not a new estimator or API registration."
+}

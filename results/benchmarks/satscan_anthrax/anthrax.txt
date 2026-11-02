@@ -1,0 +1,481 @@
+                                 _____________________________
+
+                                        SaTScan v10.3.3
+                                 _____________________________
+
+
+Program run on: Sat Oct 10 00:13:43 2026
+
+Retrospective Space-Time analysis
+scanning for clusters with high rates
+using the Space-Time Permutation model.
+_______________________________________________________________________________________________
+
+SUMMARY OF DATA
+
+Study period.......................: 1933/1/1 to 2014/12/31
+Number of locations................: 167
+Total number of cases..............: 4179
+_______________________________________________________________________________________________
+
+CLUSTERS DETECTED
+
+1.Location IDs included.: D0119D0013D0018D0004D0017, D0109, D0010, D0011, D0116, D0118, D0005,
+                          D0006, D0090, D0112, D0094, D0003, D0019, D0117, D0007, D0008, D0121,
+                          D0014, D0081, D0001, D0110, D0096, D0083, D0084, D0093, D0115, D0113,
+                          D0012, D0092, D0016, D0091, D0114, D0082, D0002, D0009, D0111, D0095
+  Coordinates / radius..: (52.583333 N, 67.834167 E) / 347.03 km
+  Span..................: 684.59 km
+  Time frame............: 1935/1/1 to 1952/12/31
+  Number of cases.......: 348
+  Expected cases........: 106.78
+  Observed / expected...: 3.26
+  Test statistic........: 177.210636
+  P-value...............: < 0.00000000000000001
+
+2.Location IDs included.: D0159D0160D0161D0162D0165, D0048, D0036, D0158, D0038, D0166, D0039,
+                          D0042, D0046, D0164, D0167, D0143, D0134, D0144, D0163
+  Coordinates / radius..: (43.551220 N, 73.995650 E) / 349.72 km
+  Span..................: 612.08 km
+  Time frame............: 1970/1/1 to 2001/12/31
+  Number of cases.......: 576
+  Expected cases........: 397.23
+  Observed / expected...: 1.45
+  Test statistic........: 39.561169
+  P-value...............: 0.0000000000000022
+
+3.Location IDs included.: D0056D0065D0071D0058D0057, D0059, D0064, D0066, D0060, D0129, D0062,
+                          D0068, D0075, D0128, D0124, D0072, D0073, D0130, D0067, D0122, D0069,
+                          D0131, D0034, D0061, D0063
+  Coordinates / radius..: (49.352941 N, 79.411765 E) / 381.76 km
+  Span..................: 736.64 km
+  Time frame............: 1953/1/1 to 1965/12/31
+  Number of cases.......: 365
+  Expected cases........: 226.53
+  Observed / expected...: 1.61
+  Test statistic........: 38.098057
+  P-value...............: 0.000000000000011
+
+4.Location IDs included.: D0103D0098D0099D0100D0104, D0101
+  Coordinates / radius..: (44.953213 N, 62.163830 E) / 264.67 km
+  Span..................: 413.32 km
+  Time frame............: 1946/1/1 to 1958/12/31
+  Number of cases.......: 59
+  Expected cases........: 18.11
+  Observed / expected...: 3.26
+  Test statistic........: 28.993643
+  P-value...............: 0.00000000020
+
+5.Location IDs included.: D0139
+  Coordinates / radius..: (42.515530 N, 69.778914 E) / 0 km
+  Span..................: 0 km
+  Time frame............: 1933/1/1 to 1937/12/31
+  Number of cases.......: 16
+  Expected cases........: 1.04
+  Observed / expected...: 15.35
+  Test statistic........: 28.766866
+  P-value...............: 0.00000000026
+
+6.Location IDs included.: D0054D0050D0051D0055D0053, D0032, D0023, D0156, D0157, D0150, D0031,
+                          D0052, D0147, D0151, D0153, D0146, D0152, D0108, D0154, D0107, D0149,
+                          D0155, D0148, D0027
+  Coordinates / radius..: (47.529167 N, 52.725000 E) / 415.67 km
+  Span..................: 792.07 km
+  Time frame............: 1966/1/1 to 1967/12/31
+  Number of cases.......: 82
+  Expected cases........: 36.75
+  Observed / expected...: 2.23
+  Test statistic........: 20.815130
+  P-value...............: 0.0000014
+
+7.Location IDs included.: D0024D0028D0026D0021D0022, D0027, D0029, D0031, D0149, D0150, D0032,
+                          D0148, D0020, D0023, D0097, D0152
+  Coordinates / radius..: (50.865000 N, 57.120000 E) / 308.96 km
+  Span..................: 597.12 km
+  Time frame............: 1979/1/1 to 1985/12/31
+  Number of cases.......: 59
+  Expected cases........: 23.06
+  Observed / expected...: 2.56
+  Test statistic........: 19.638093
+  P-value...............: 0.0000049
+
+8.Location IDs included.: D0127D0123D0132D0133
+  Coordinates / radius..: (53.059000 N, 76.172000 E) / 113.03 km
+  Span..................: 179.85 km
+  Time frame............: 1968/1/1 to 1969/12/31
+  Number of cases.......: 21
+  Expected cases........: 3.69
+  Observed / expected...: 5.69
+  Test statistic........: 19.226477
+  P-value...............: 0.0000077
+
+9.Location IDs included.: D0161D0165D0159D0158D0160
+  Coordinates / radius..: (42.920788 N, 73.189212 E) / 146.12 km
+  Span..................: 281.97 km
+  Time frame............: 1962/1/1 to 1964/12/31
+  Number of cases.......: 60
+  Expected cases........: 26.62
+  Observed / expected...: 2.25
+  Test statistic........: 15.513917
+  P-value...............: 0.00042
+
+10.Location IDs included.: D0034D0045
+   Coordinates / radius..: (46.126449 N, 80.830797 E) / 64.80 km
+   Span..................: 64.80 km
+   Time frame............: 1947/1/1 to 1949/12/31
+   Number of cases.......: 18
+   Expected cases........: 3.68
+   Observed / expected...: 4.89
+   Test statistic........: 14.278586
+   P-value...............: 0.0016
+
+11.Location IDs included.: D0074
+   Coordinates / radius..: (50.058974 N, 73.342949 E) / 0 km
+   Span..................: 0 km
+   Time frame............: 1982/1/1 to 1983/12/31
+   Number of cases.......: 7
+   Expected cases........: 0.39
+   Observed / expected...: 18.15
+   Test statistic........: 13.680521
+   P-value...............: 0.0031
+
+12.Location IDs included.: D0107D0106D0108D0055D0050, D0052, D0054, D0157, D0051, D0147, D0041,
+                           D0053
+   Coordinates / radius..: (44.133333 N, 52.450000 E) / 503.66 km
+   Span..................: 941.54 km
+   Time frame............: 1946/1/1 to 1946/12/31
+   Number of cases.......: 7
+   Expected cases........: 0.44
+   Observed / expected...: 15.81
+   Test statistic........: 12.773413
+   P-value...............: 0.0082
+
+13.Location IDs included.: D0136D0138D0141D0134D0140
+   Coordinates / radius..: (40.741667 N, 68.325000 E) / 219.36 km
+   Span..................: 219.36 km
+   Time frame............: 1959/1/1 to 1960/12/31
+   Number of cases.......: 53
+   Expected cases........: 24.82
+   Observed / expected...: 2.14
+   Test statistic........: 12.126503
+   P-value...............: 0.014
+
+14.Location IDs included.: D0084
+   Coordinates / radius..: (52.242109 N, 63.951361 E) / 0 km
+   Span..................: 0 km
+   Time frame............: 1957/1/1 to 1957/12/31
+   Number of cases.......: 9
+   Expected cases........: 1.29
+   Observed / expected...: 6.97
+   Test statistic........: 9.775941
+   P-value...............: 0.213
+
+15.Location IDs included.: D0135D0145
+   Coordinates / radius..: (43.571320 N, 67.940665 E) / 31.03 km
+   Span..................: 31.03 km
+   Time frame............: 1955/1/1 to 1957/12/31
+   Number of cases.......: 12
+   Expected cases........: 2.40
+   Observed / expected...: 5.00
+   Test statistic........: 9.721998
+   P-value...............: 0.228
+
+16.Location IDs included.: D0051D0054D0050D0156
+   Coordinates / radius..: (48.215556 N, 51.566667 E) / 152.03 km
+   Span..................: 266.87 km
+   Time frame............: 1997/1/1 to 1997/12/31
+   Number of cases.......: 3
+   Expected cases........: 0.046
+   Observed / expected...: 65.30
+   Test statistic........: 9.583821
+   P-value...............: 0.254
+
+17.Location IDs included.: D0025D0020D0030D0086D0029, D0098, D0082, D0088, D0100, D0026, D0093,
+                           D0022, D0097, D0021, D0083, D0079, D0024, D0028, D0103, D0099,
+                           D0084, D0031, D0095, D0019, D0023, D0085, D0104, D0010, D0090
+   Coordinates / radius..: (48.716667 N, 61.750000 E) / 484.55 km
+   Span..................: 888.74 km
+   Time frame............: 1961/1/1 to 1963/12/31
+   Number of cases.......: 85
+   Expected cases........: 51.12
+   Observed / expected...: 1.66
+   Test statistic........: 9.478303
+   P-value...............: 0.285
+
+18.Location IDs included.: D0109
+   Coordinates / radius..: (53.650000 N, 67.822222 E) / 0 km
+   Span..................: 0 km
+   Time frame............: 1978/1/1 to 1978/12/31
+   Number of cases.......: 3
+   Expected cases........: 0.053
+   Observed / expected...: 56.47
+   Test statistic........: 9.155449
+   P-value...............: 0.368
+
+19.Location IDs included.: D0063
+   Coordinates / radius..: (48.418333 N, 84.440417 E) / 0 km
+   Span..................: 0 km
+   Time frame............: 1940/1/1 to 1940/12/31
+   Number of cases.......: 5
+   Expected cases........: 0.37
+   Observed / expected...: 13.39
+   Test statistic........: 8.349978
+   P-value...............: 0.618
+
+20.Location IDs included.: D0021D0022D0028D0024
+   Coordinates / radius..: (50.314359 N, 57.188462 E) / 61.38 km
+   Span..................: 102.24 km
+   Time frame............: 1992/1/1 to 1995/12/31
+   Number of cases.......: 6
+   Expected cases........: 0.66
+   Observed / expected...: 9.14
+   Test statistic........: 7.934523
+   P-value...............: 0.757
+
+21.Location IDs included.: D0139
+   Coordinates / radius..: (42.515530 N, 69.778914 E) / 0 km
+   Span..................: 0 km
+   Time frame............: 1939/1/1 to 1957/12/31
+   Number of cases.......: 48
+   Expected cases........: 25.71
+   Observed / expected...: 1.87
+   Test statistic........: 7.736095
+   P-value...............: 0.827
+
+22.Location IDs included.: D0035
+   Coordinates / radius..: (45.916667 N, 45.916667 E) / 0 km
+   Span..................: 0 km
+   Time frame............: 1961/1/1 to 1961/12/31
+   Number of cases.......: 3
+   Expected cases........: 0.087
+   Observed / expected...: 34.54
+   Test statistic........: 7.713989
+   P-value...............: 0.831
+
+23.Location IDs included.: D0076
+   Coordinates / radius..: (50.241176 N, 71.202941 E) / 0 km
+   Span..................: 0 km
+   Time frame............: 1975/1/1 to 1975/12/31
+   Number of cases.......: 5
+   Expected cases........: 0.46
+   Observed / expected...: 10.88
+   Test statistic........: 7.395467
+   P-value...............: 0.918
+
+24.Location IDs included.: D0028
+   Coordinates / radius..: (50.547222 N, 56.677778 E) / 0 km
+   Span..................: 0 km
+   Time frame............: 1972/1/1 to 1972/12/31
+   Number of cases.......: 3
+   Expected cases........: 0.11
+   Observed / expected...: 27.14
+   Test statistic........: 7.014176
+   P-value...............: 0.980
+
+25.Location IDs included.: D0074D0077
+   Coordinates / radius..: (50.058974 N, 73.342949 E) / 66.42 km
+   Span..................: 66.42 km
+   Time frame............: 1956/1/1 to 1956/12/31
+   Number of cases.......: 6
+   Expected cases........: 0.79
+   Observed / expected...: 7.60
+   Test statistic........: 6.960367
+   P-value...............: 0.984
+
+26.Location IDs included.: D0120
+   Coordinates / radius..: (53.866667 N, 72.705556 E) / 0 km
+   Span..................: 0 km
+   Time frame............: 1978/1/1 to 1979/12/31
+   Number of cases.......: 3
+   Expected cases........: 0.11
+   Observed / expected...: 26.45
+   Test statistic........: 6.940118
+   P-value...............: 0.986
+
+27.Location IDs included.: D0101
+   Coordinates / radius..: (44.829451 N, 65.521486 E) / 0 km
+   Span..................: 0 km
+   Time frame............: 1967/1/1 to 1967/12/31
+   Number of cases.......: 10
+   Expected cases........: 2.39
+   Observed / expected...: 4.19
+   Test statistic........: 6.718865
+   P-value...............: 0.992
+
+28.Location IDs included.: D0094
+   Coordinates / radius..: (53.500107 N, 65.728344 E) / 0 km
+   Span..................: 0 km
+   Time frame............: 1966/1/1 to 1966/12/31
+   Number of cases.......: 4
+   Expected cases........: 0.30
+   Observed / expected...: 13.39
+   Test statistic........: 6.679572
+   P-value...............: 0.995
+
+29.Location IDs included.: D0015D0125
+   Coordinates / radius..: (52.497250 N, 73.096478 E) / 103.62 km
+   Span..................: 103.62 km
+   Time frame............: 1979/1/1 to 1982/12/31
+   Number of cases.......: 5
+   Expected cases........: 0.55
+   Observed / expected...: 9.05
+   Test statistic........: 6.566443
+   P-value...............: 0.996
+
+30.Location IDs included.: D0011D0017
+   Coordinates / radius..: (53.291667 N, 69.391667 E) / 31.10 km
+   Span..................: 31.10 km
+   Time frame............: 1968/1/1 to 1972/12/31
+   Number of cases.......: 13
+   Expected cases........: 3.91
+   Observed / expected...: 3.33
+   Test statistic........: 6.549343
+   P-value...............: 0.997
+
+31.Location IDs included.: D0002
+   Coordinates / radius..: (50.953618 N, 71.943439 E) / 0 km
+   Span..................: 0 km
+   Time frame............: 1998/1/1 to 1998/12/31
+   Number of cases.......: 2
+   Expected cases........: 0.029
+   Observed / expected...: 69.65
+   Test statistic........: 6.516145
+   P-value...............: 0.998
+
+32.Location IDs included.: D0089
+   Coordinates / radius..: (53.516612 N, 61.793077 E) / 0 km
+   Span..................: 0 km
+   Time frame............: 1973/1/1 to 1976/12/31
+   Number of cases.......: 6
+   Expected cases........: 0.89
+   Observed / expected...: 6.72
+   Test statistic........: 6.328220
+   P-value...............: 0.999
+_______________________________________________________________________________________________
+
+ADDITIONAL RESULTS FILES
+
+Google Maps                      : data/normalized/results/satscan/anthrax/anthrax.clustermap.html
+Shapefile                        : data/normalized/results/satscan/anthrax/anthrax.col.shp
+Shapefile                        : data/normalized/results/satscan/anthrax/anthrax.gis.shp
+Cluster Information              : data/normalized/results/satscan/anthrax/anthrax.col.dbf
+Stratified Cluster File          : data/normalized/results/satscan/anthrax/anthrax.sci.dbf
+Location Information             : data/normalized/results/satscan/anthrax/anthrax.gis.dbf
+Risk Estimates for Each Location : data/normalized/results/satscan/anthrax/anthrax.rr.dbf
+_______________________________________________________________________________________________
+
+PARAMETER SETTINGS
+
+Input
+-----
+  Case File        : data/normalized/results/satscan/anthrax/anthrax.cas
+  Time Precision   : Year
+  Start Date       : 1933/1/1
+  End Date         : 2014/12/31
+  Coordinates File : data/normalized/results/satscan/anthrax/anthrax.geo
+  Coordinates      : Latitude/Longitude
+
+Analysis
+--------
+  Type of Analysis        : Retrospective Space-Time
+  Probability Model       : Space-Time Permutation
+  Scan For Areas With     : High Rates
+  Time Aggregation Units  : Year
+  Time Aggregation Length : 1
+
+Output
+------
+  Main Results File                : data/normalized/results/satscan/anthrax/anthrax.txt
+  HTML file for Google Map         : No
+  KML file for Google Earth        : Yes
+  Shapefile for GIS software       : Yes
+  HTML file for Cartesian map      : No
+  Cluster Information              : No (ASCII), Yes (dBase)
+  Stratified Cluster Information   : No (ASCII), Yes (dBase)
+  Location Information             : No (ASCII), Yes (dBase)
+  Risk Estimates for Each Location : No (ASCII), Yes (dBase)
+  Simulated Test Statistics        : No (ASCII), No (dBase)
+
+Data Checking
+-------------
+  Temporal Data Check     : Check to ensure that all cases and controls are within the specified temporal study period.
+  Geographical Data Check : Check to ensure that all observations (cases, controls and populations) are within the specified geographical area.
+
+Spatial Neighbors
+-----------------
+  Specify neighbors through a non-Euclidean neighbors file : No
+  Specify a meta location file                             : No
+  Observations with Multiple Locations                     : One location per observation.
+
+Locations Network
+-----------------
+  Use Locations Network File : No
+
+Spatial Window
+--------------
+  Maximum Spatial Cluster Size : 50 percent of population at risk
+  Window Shape                 : Circular
+
+Temporal Window
+---------------
+  Minimum Temporal Cluster Size : 1 Year
+  Maximum Temporal Cluster Size : 50 percent of study period
+
+Cluster Restrictions
+--------------------
+  Minimum Cases in Cluster for High Rates : 2
+  Restrict High Rate Clusters             : No
+
+Space And Time Adjustments
+--------------------------
+  Adjust for Weekly Trends, Nonparametric : No
+
+Inference
+---------
+  P-Value Reporting                  : Default Combination
+  Number of Replications             : 999
+  Adjusting for More Likely Clusters : No
+
+Drilldown
+---------
+  Same Design as Main Analysis : No
+  Purely Spatial Bernoulli     : No
+
+Spatial Output
+--------------
+  Automatically Launch Map                  : Yes
+  Report Hierarchical Clusters              : Yes
+  Criteria for Reporting Secondary Clusters : No Geographical Overlap
+  Restrict Reporting to Smaller Clusters    : No
+
+Temporal Graphs
+---------------
+  Produce Temporal Graphs : No
+
+Other Output
+------------
+  Report Critical Values  : No
+  Report Monte Carlo Rank : No
+  User Defined Title      : 
+
+Notifications
+-------------
+  Always Send Email                      : No
+  Send Email with Results Meeting Cutoff : No
+
+Run Options
+-----------
+  Processor Usage   : All Available Processors
+  Suppress Warnings : No
+  Logging Analysis  : No
+
+System
+------
+  Parameters Version : 10.3.0
+_______________________________________________________________________________________________
+
+RUN INFORMATION
+
+Program completed  : Sat Oct 10 00:13:53 2026
+Total Running Time : 10 seconds
+Processor Usage    : 8 processors

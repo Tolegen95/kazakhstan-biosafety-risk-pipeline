@@ -1,0 +1,24 @@
+{
+  "before": {
+    "prototype/pipeline/core.py": "24a2a502c8a89c7578d9ef4fcfc98dbf8bb08a4bb148b1551475b1b2c547159f",
+    "prototype/pipeline/modules/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prototype/pipeline/modules/bayes_beta_binomial.py": "b052c5e09ec1bb78bf53c198ba3c0e7bcd3dfd9c4793e6b0e63d688d05eab514",
+    "prototype/pipeline/modules/maxent.py": "36170fda7c13302ee5e4570e0196d2d05977cb42b05cea6aeee188a83afb786b",
+    "prototype/pipeline/modules/pca.py": "19e35d27343e94f04caf8b0e8106e80acb45cb1876d452acde8d11ea5e4a93d0",
+    "prototype/pipeline/modules/space_time_scan.py": "0d5692ae088a73e5529c4a2189a55789697d96eed6e138dffa442e4cbfc4e509",
+    "prototype/pipeline/covariates.py": "67eb234ae4fd471705c7e94a0417e41f3240982382ffb71613da7f48ac33e349",
+    "prototype/etl/normalize.py": "eb372baae53dfb57230a69be9159f420ac6607e66772145bad0ebaba5b0b72d4",
+    "prototype/api/main.py": "aecb76ed68877980e65447c3f21b7cb8abb4944870c712575e6b271576ed4073"
+  },
+  "after": {
+    "prototype/pipeline/core.py": "24a2a502c8a89c7578d9ef4fcfc98dbf8bb08a4bb148b1551475b1b2c547159f",
+    "prototype/pipeline/modules/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prototype/pipeline/modules/bayes_beta_binomial.py": "b052c5e09ec1bb78bf53c198ba3c0e7bcd3dfd9c4793e6b0e63d688d05eab514",
+    "prototype/pipeline/modules/maxent.py": "36170fda7c13302ee5e4570e0196d2d05977cb42b05cea6aeee188a83afb786b",
+    "prototype/pipeline/modules/pca.py": "19e35d27343e94f04caf8b0e8106e80acb45cb1876d452acde8d11ea5e4a93d0",
+    "prototype/pipeline/modules/space_time_scan.py": "0d5692ae088a73e5529c4a2189a55789697d96eed6e138dffa442e4cbfc4e509",
+    "prototype/pipeline/covariates.py": "67eb234ae4fd471705c7e94a0417e41f3240982382ffb71613da7f48ac33e349",
+    "prototype/etl/normalize.py": "eb372baae53dfb57230a69be9159f420ac6607e66772145bad0ebaba5b0b72d4",
+    "prototype/api/main.py": "aecb76ed68877980e65447c3f21b7cb8abb4944870c712575e6b271576ed4073"
+  }
+}

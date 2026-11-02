@@ -1,0 +1,22 @@
+{
+  "disease": "anthrax",
+  "reservoir_category": null,
+  "n_presence": 4031,
+  "n_background": 5000,
+  "module": {
+    "auc_random_mean": 0.808,
+    "auc_random_sd": 0.0068,
+    "auc_block_mean": 0.77,
+    "auc_block_sd_across_repeats": 0.0056,
+    "seconds_total": 1.7
+  },
+  "maxent": {
+    "auc_random_mean": 0.8292,
+    "auc_random_sd": 0.0066,
+    "auc_block_mean": 0.6717,
+    "auc_block_sd_across_repeats": 0.0068,
+    "seconds_total": 929.3
+  },
+  "spearman_surfaces": 0.8511,
+  "top20pct_overlap_jaccard": 0.474
+}

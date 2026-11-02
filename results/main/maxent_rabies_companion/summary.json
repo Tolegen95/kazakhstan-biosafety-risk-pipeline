@@ -1,0 +1,51 @@
+{
+  "module": "maxent",
+  "disease": "rabies",
+  "params": {
+    "background_size": 5000,
+    "train_fraction": 0.75,
+    "n_iterations": 100,
+    "random_seed": 42,
+    "l2_C": 1.0,
+    "spatial_cv_block_deg": 2.0,
+    "spatial_cv_folds": 5,
+    "spatial_cv_repeats": 10
+  },
+  "covariates": [
+    "elevation",
+    "bio1",
+    "bio10",
+    "bio11",
+    "bio12",
+    "bio13",
+    "bio14",
+    "bio15",
+    "bio16",
+    "bio17",
+    "bio18",
+    "bio19",
+    "bio2",
+    "bio3",
+    "bio4",
+    "bio5",
+    "bio6",
+    "bio7",
+    "bio8",
+    "bio9"
+  ],
+  "n_presence_used": 150,
+  "n_presence_dropped_nodata": 2,
+  "n_background": 5000,
+  "auc_mean": 0.86,
+  "auc_std": 0.0284,
+  "spatial_block_cv": {
+    "block_deg": 2.0,
+    "folds": 5,
+    "repeats": 10,
+    "n_blocks_with_presence": 44,
+    "n_folds_evaluated": 50,
+    "auc_mean": 0.7935,
+    "auc_std_across_repeats": 0.0222,
+    "auc_std_across_folds": 0.0862
+  }
+}
